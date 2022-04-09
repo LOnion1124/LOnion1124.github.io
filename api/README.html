@@ -1,0 +1,9 @@
+<h1 id="Live2D-demo"><a href="#Live2D-demo" class="headerlink" title="Live2D demo"></a>Live2D demo</h1><p>Live2D 看板娘插件 (<a href="https://www.fghrsh.net/post/123.html">https://www.fghrsh.net/post/123.html</a>) 的前端 HTML 源码<br>无需模型 API 版</p>
+<p>在 fghrsh 的 <a href="https://github.com/fghrsh/live2d_demo">Live2D demo</a> 的基础上修改而成，具体使用方法请参考原版，以下仅交代不同之处</p>
+<p>和原版相比，此版本无需再搭建后端 API (在前端实现模型和材质的更换，一言 API 仍需后端支持)。<br>可以直接白嫖 jsdelivr（<br>为了写代码的方便，我把模型和材质的id都从0开始了</p>
+<p>若需添加新模型，请克隆原后端 API，按照原 API 的方式添加好模型后，将<code>gene_config_file.py</code>移动至API的<code>model</code>文件夹下并运行。修改<code>waifu-tips.js</code>中的<code>live2d_settings[&#39;staticAPIFile&#39;]</code>为生成的<code>static-api-file.json</code>目录，并更新<code>live2d_settings[&#39;staticPath&#39;]</code>为<code>model</code>文件夹路径，即可正常使用。</p>
+<h2 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h2><blockquote>
+<p>( ˃ ˄ ˂̥̥ ) 都看到这了，点个 Star 吧 ~</p>
+</blockquote>
+<p><a href="https://designmodo.com/flat-free/" title="Flat UI Free">Flat UI Free</a><br><a href="https://github.com/journey-ad/live2d_src" title="基于 #fea64e4 的修改版">live2d_src &#x2F; ©journey-ad &#x2F; GPL v2.0</a><br><a href="https://imjad.cn/" title="猫与向日葵">waifu-tips.js &#x2F; ©journey-ad &#x2F; CC BY-NC-SA 4.0</a><br><a href="https://github.com/fghrsh/live2d_demo" title="Live2D demo">Live2D demo &#x2F; ©fghrsh &#x2F; GPL v2.0</a>  </p>
+<p>Open sourced under the GPL v2.0 license.</p>
