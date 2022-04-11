@@ -33,8 +33,8 @@ if (screen.width >= 768) {
 	]).then(() => {
 		initWidget({
 			waifuPath: live2d_path + "waifu-tips.json",
-			//apiPath: "https://live2d.fghrsh.net/api/",
-			cdnPath: "https://lonion1124.github.io/live2d_api/"
+			apiPath: "https://lonion1124.github.io/live2d_api/",
+			//cdnPath: "https://lonion1124.github.io/live2d_api/"
 		});
 	});
 }
