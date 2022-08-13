@@ -11696,7 +11696,7 @@ figure.highlight .section {
 }
 .navbar,
 .footer {
-  background-color: rgba(225,225,225,0.7);
+  background-color: rgba(240,240,240,0.7);
 }
 @media screen and (min-width: 1104px), print {
   .column.is-4,
@@ -11720,6 +11720,15 @@ figure.highlight .section {
 .article .content a img {
   margin: auto;
   display: block;
+}
+.snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100001;
 }
 body {
   counter-reset: card;
