@@ -2121,7 +2121,7 @@ a.list-item {
   padding: 20px;
 }
 .navbar {
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.7);
   min-height: 3.25rem;
   position: relative;
   z-index: 30;
@@ -2983,7 +2983,7 @@ a.navbar-item.is-active,
     display: none;
   }
   .navbar-menu {
-    background-color: #fff;
+    background-color: rgba(255,255,255,0.7);
     box-shadow: 0 8px 16px rgba(10,10,10,0.1);
     padding: 0.5rem 0;
   }
@@ -11690,12 +11690,9 @@ figure.highlight .section {
 .card {
   background-color: rgba(255,255,255,0.9);
 }
-.widget {
-  background-color: rgba(240,240,240,0.7);
-}
-.navbar,
+.widget,
 .footer {
-  background-color: rgba(240,240,240,0.7);
+  background-color: rgba(255,255,255,0.7);
 }
 @media screen and (min-width: 1104px), print {
   .column.is-4,
