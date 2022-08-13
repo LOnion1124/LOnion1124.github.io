@@ -388,7 +388,7 @@ th:not([align]) {
   text-align: left;
 }
 html {
-  background-color: #f7f7f7;
+  background-color: #f6f6f8;
   font-size: 14px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -11680,8 +11680,22 @@ figure.highlight .section {
   position: sticky;
   top: 0.75rem;
 }
+.is-2-column {
+  background-image: url("https://www.dmoe.cc/random.php");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.card {
+  background-color: rgba(255,255,255,0.9);
+}
 .widget {
-  background-color: rgba(255,255,255,0.812);
+  background-color: rgba(240,240,240,0.7);
+}
+.navbar,
+.footer {
+  background-color: rgba(225,225,225,0.7);
 }
 @media screen and (min-width: 1104px), print {
   .column.is-4,
