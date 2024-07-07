@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>LOnion's blog</title>
+    <meta name="generator" content="Hexo 7.3.0"></head>
+
+    <body>
+        <h1>
+            <a href="/">LOnion&#39;s blog</a>
+            <a href="/">Home</a>
+            <a href="/archives">Archive</a>
+            <a href="/about">About</a>
+        </h1>
+        <!-- 博客详情 -->
+
+
+<h2>更新日志2022.8</h2>
+<p>2022/08/10 00:00:00</p>
+<h2 id="2022-8-10更新"><a href="#2022-8-10更新" class="headerlink" title="2022.8.10更新"></a>2022.8.10更新</h2><p>呼！终于完成了更换电脑后博客的重生……</p>
+<p>详情可以参考<a target="_blank" rel="noopener" href="https://lonion1124.github.io/2022/08/10/%E5%85%B3%E4%BA%8E%E6%8D%A2%E7%94%B5%E8%84%91%E4%B9%8B%E5%90%8E%E7%9A%84%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/">我写的博客</a>里的记录。</p>
+<h2 id="2022-8-13更新"><a href="#2022-8-13更新" class="headerlink" title="2022.8.13更新"></a>2022.8.13更新</h2><p>为了解决博客页面过于单调的问题，今天添加了随机背景动漫图片。</p>
+<p>将<a target="_blank" rel="noopener" href="https://blog.mchook.cn/2021/07/22/icarus%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89/">此篇文章</a>里更改背景中的图片地址换成随机的图片api接口即可。</p>
+<p>随后，为了美观，还更改了顶部栏、底部栏的颜色和不透明度，并将文章栏（在不影响阅读的基础上）也设置为了半透明。</p>
+<p>顺便把网站logo的白底给去了。</p>
+<p>本来我是想不加背景而更改网站配色的，不过这个博客主题的配色方案修改起来非常复杂，就放弃了。</p>
+<p>此外，由于添加了背景，动态线条的特效也被我删去了。这导致了整个网站看上去一动不动。本来为了优化此问题，我打算添加自动下雪的效果，可是效果并不理想（有一个效果理想的模板，可我不会用），遂放弃。</p>
+<p>能力还是太差了啊，唉。</p>
+<p>另外，给看板娘加了几句话。</p>
+<p>本来还想修改一下网站字体，可惜googlefonts上不去。算了。</p>
+<p>还有，把鼠标单击特效改成了随机颜色。</p>
+<h3 id="傍晚更新"><a href="#傍晚更新" class="headerlink" title="傍晚更新"></a>傍晚更新</h3><p>我都佩服我自己。之前我说：</p>
+<blockquote>
+<p>本来为了优化此问题，我打算添加自动下雪的效果，可是效果并不理想（有一个效果理想的模板，可我不会用），遂放弃。</p>
+</blockquote>
+<p>但是我没有死心，经过不懈的折腾，我成功地为博客加入了美丽的3d下雪效果。</p>
+<p>代码来自<a target="_blank" rel="noopener" href="https://www.yaxi.net/2016-12-28/1211.html">这里</a>。</p>
+<p>不过，这里只提供了最原始的html代码，具体整合进入icarus的方法是我摸出来的。（我没有一点前端或者后端知识，真就全是连蒙带猜靠直觉。）</p>
+<p>为此，我专门写了一篇<a target="_blank" rel="noopener" href="https://lonion1124.github.io/2022/08/13/%E5%9C%A8hexo+Icarus4.x%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B8%8A%E6%B7%BB%E5%8A%A03D%E9%A3%98%E9%9B%AA%E6%95%88%E6%9E%9C/">文章</a>来记录搭建此功能的过程。</p>
+<p>另外，不知发生了什么事，网站的字体出了一点问题（我什么也没做啊，真奇怪）。总之把head.jsx里的cyberpunk注释掉，换回了default就正常了。（为什么默认会是cyberpunk啊？）</p>
+<p>在页面变小的时候，顶部栏会分为两行，此时下面一行的颜色不知道怎么更改。试着修改了”node_modules\bulma-stylus\stylus\components\navbar.styl”里的参数（第一行由$scheme-main变为rgba(255,255,255,0.7)），有变化但是不知道为什么还是不一样。实在没辙，将就一下吧……</p>
+<h2 id="2022-8-14更新"><a href="#2022-8-14更新" class="headerlink" title="2022.8.14更新"></a>2022.8.14更新</h2><p>昨天的颜色透明度问题依然没有解决，不过这次尝试直接更改”node_modules\bulma-stylus\stylus\utilities\initial-variables.styl”里的预设颜色配置，虽然效果没变化，不过起码修改起来方便。而且由于修改的是默认配置，因此也不用担心整体的不协调。（现在所有默认白色都有透明效果啦！）</p>
+<p>本来想着加一个背景音乐播放器，不过不会弄而且感觉用处不大，遂作罢。</p>
+
+
+        <h3>categories</h3>
+        <ul>
+            
+                <li>
+                    <a href="/categories/%E6%9D%82%E8%B0%88/">
+                        杂谈
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        学习笔记
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/categories/%E6%8A%80%E6%9C%AF%E6%8C%87%E5%8D%97/">
+                        技术指南
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/categories/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/">
+                        更新日志
+                    </a>
+                </li>
+            
+        </ul>
+
+        <h3>tags</h3>
+        <ul>
+            
+                <li>
+                    <a href="/tags/ACGN/">
+                        ACGN
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/tags/%E6%97%A5%E8%AF%AD/">
+                        日语
+                    </a>
+                </li>
+            
+        </ul>
+    </body>
+</html>
