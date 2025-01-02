@@ -33,7 +33,7 @@ $(document).ready(function () {
 // 代码复制按钮
 $(document).ready(function () {
     $('.copyButton').click(function () {
-        var codeContent = $(this).next('.codeSnippet').text();
+        var codeContent = $(this).parent().parent().next('.codeSnippet').text();
         navigator.clipboard.writeText(codeContent)
             .then(function () {
                 alert('代码已复制到剪贴板！');

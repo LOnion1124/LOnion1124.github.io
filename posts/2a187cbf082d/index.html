@@ -24,7 +24,7 @@
 
 
   <!-- 代码高亮 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs@9.16.2/styles/github.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/styles/base16/papercolor-light.css">
   <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
   
 <script src="/js/use_hl.js"></script>
@@ -41,9 +41,6 @@
   <script src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"> </script>
 
   <!-- LaTeX -->
-  
-<script src="/js/mathjax.js"></script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML" async></script>
 
   <!-- local search -->
@@ -58,7 +55,7 @@
     var path = "/" + search_path;
     searchFunc(path, 'local-search-input', 'local-search-result');
   </script>
-
+  
 <meta name="generator" content="Hexo 7.3.0"></head>
 
 <body>
@@ -136,14 +133,13 @@
 </header></div>
 
     
-    
+
     <div class="px-2 px-md-0">
       <div class="row">
   <div class="col-md-3 offset-md-1 d-none d-md-block">
     <div class="position-sticky" style="top: 2rem;">
 
   <!-- 头像框 -->
-  
   
 
   <!-- 文章页 -->
@@ -153,37 +149,35 @@
   <div class="p-2 mb-3 bg-light rounded text-center shadow-sm">
     
     
-      <div class="text-muted fs-4 border-bottom pb-1 mb-2"><i class="bi bi-blockquote-left"></i>&nbsp;摘要</div>
-      <div class="p-2 text-muted">hexo主题Onion的开发过程与介绍</div>
+    <div class="text-muted fs-4 border-bottom pb-1 mb-2"><i class="bi bi-blockquote-left"></i>&nbsp;摘要</div>
+    <div class="p-2 text-muted">hexo主题Onion的开发过程与介绍</div>
     
   </div>
   
+
   <!-- 目录 -->
   
-    <div class="p-2 mb-3 border rounded shadow-sm">
-      <div class="text-center fs-4 text-muted border-bottom pb-1 mb-2"><i class="bi bi-bookmark-dash"></i>&nbsp;目录</div>
-      <div id="toc" class="px-2"></div>
-      
+  <div class="p-2 mb-3 border rounded shadow-sm">
+    <div class="text-center fs-4 text-muted border-bottom pb-1 mb-2"><i class="bi bi-bookmark-dash"></i>&nbsp;目录</div>
+    <div id="toc" class="px-2"></div>
+    
 <script src="/js/toc.js"></script>
 
-    </div>
-  
-  
-
-  <hr>
-
-  <div class="p-4">
-    <h4 class="fst-italic"><i class="bi bi-folder"></i>&nbsp;分类</h4>
-    <div class="mt-2 px-2 pt-2"><ul class="site-category-list"><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="site-category-list-count">1</span></li><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/">开发日志</a><span class="site-category-list-count">2</span></li><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%8C%87%E5%8D%97/">技术指南</a><span class="site-category-list-count">2</span></li><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a><span class="site-category-list-count">3</span></li></ul></div>
   </div>
-
+  
+  
   <hr>
-
+  <!-- 标签 -->
   <div class="p-4">
     <h4 class="fst-italic"><i class="bi bi-tags"></i>&nbsp;标签</h4>
-    <div class="mt-2 px-2 pt-2"><a class="site-tag-link" href="/tags/ACGN/" rel="tag">ACGN<span class="site-tag-count">3</span></a> <a class="site-tag-link" href="/tags/hexo-onion/" rel="tag">hexo-onion<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E6%97%A5%E8%AF%AD/" rel="tag">日语<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔<span class="site-tag-count">1</span></a></div>
+    <div class="mt-2 px-2 pt-2"><a class="site-tag-link" href="/tags/ACGN/" rel="tag">ACGN<span class="site-tag-count">3</span></a> <a class="site-tag-link" href="/tags/KNN/" rel="tag">KNN<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/hexo-onion/" rel="tag">hexo-onion<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E6%97%A5%E8%AF%AD/" rel="tag">日语<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔<span class="site-tag-count">1</span></a></div>
   </div>
-
+  <hr>
+  <!-- 分类 -->
+  <div class="p-4">
+    <h4 class="fst-italic"><i class="bi bi-folder"></i>&nbsp;分类</h4>
+    <div class="mt-2 px-2 pt-2"><ul class="site-category-list"><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="site-category-list-count">2</span></li><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/">开发日志</a><span class="site-category-list-count">2</span></li><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%8C%87%E5%8D%97/">技术指南</a><span class="site-category-list-count">2</span></li><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a><span class="site-category-list-count">3</span></li></ul></div>
+  </div>
   <hr>
 </div>
 
@@ -248,44 +242,63 @@
         <a href="/tags/hexo-onion/" class="link-secondary link-underline-opacity-0">
           <i class="bi bi-tags"></i>
           hexo-onion
-        </a></span>
+        </a>
+      </span>
       
       <span class="me-1 badge border">
         <a href="/tags/%E9%9A%8F%E7%AC%94/" class="link-secondary link-underline-opacity-0">
           <i class="bi bi-tags"></i>
           随笔
-        </a></span>
+        </a>
+      </span>
       
       <span class="me-1 badge border">
         <a href="/tags/%E5%89%8D%E7%AB%AF/" class="link-secondary link-underline-opacity-0">
           <i class="bi bi-tags"></i>
           前端
-        </a></span>
+        </a>
+      </span>
       
       
+      <!-- 字数统计 -->
+      <span class="me-1 badge border text-secondary">
+        <i class="bi bi-bar-chart"></i>
+        5k
+      </span>
+      <!-- 阅读时长 -->
+      <span class="me-1 badge border text-secondary">
+        <i class="bi bi-stopwatch"></i>
+        4 min
+      </span>
     </div>
 
     <div class="article p-4 pb-0 h-auto border rounded shadow-sm">
-      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>本篇博客将重点放在更加感性化的关于Onion主题开发过程的回忆和记录上。对于hexo-onion的使用说明等技术性内容，我会简洁的写在其<a target="_blank" rel="noopener" href="https://github.com/LOnion1124/hexo-onion">github仓库</a>的README文件内。</p>
-<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>说实话，此刻我的心情是很激动的。此次开发的这个主题不仅是我真正意义上完成的第一个开发项目，更是我高中（准确地说，高二搭建这个博客）以来的宿愿。高中时苦于技术不足（虽然现在依然不足）和缺少时间，一直只能将这个愿望高高挂起。如今步入大学，我想是时候着手满足一下高中时期的缺憾了，于是Onion主题便应运而生。</p>
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>本篇博客将重点放在更加感性化的关于Onion主题开发过程的回忆和记录上。对于hexo-onion的使用说明等技术性内容，我会简洁的写在其<a
+target="_blank" rel="noopener" href="https://github.com/LOnion1124/hexo-onion">github仓库</a>的README文件内。</p>
+<h2 id="写在前面">写在前面</h2>
+<p>说实话，此刻我的心情是很激动的。此次开发的这个主题不仅是我真正意义上完成的第一个开发项目，更是我高中（准确地说，高二搭建这个博客）以来的宿愿。高中时苦于技术不足（虽然现在依然不足）和缺少时间，一直只能将这个愿望高高挂起。如今步入大学，我想是时候着手满足一下高中时期的缺憾了，于是Onion主题便应运而生。</p>
 <p>首先，我要向一些人或物表示感谢，他们的协助对我的开发过程至关重要。</p>
 <ul>
-<li><p>GitHub，一切的源头和支撑。</p>
-</li>
-<li><p>ChatGPT4o，它教会了我使用jQuery，还完美地帮我写了不少代码。</p>
-</li>
+<li>GitHub，一切的源头和支撑。</li>
+<li>ChatGPT4o，它教会了我使用jQuery，还完美地帮我写了不少代码。</li>
 <li>Bootstrap5，它的设计风格很符合我的审美，丰富的样式库更是令人惊喜。</li>
 <li>hexo的许多插件的开发者们，好用的插件赋能便利的功能实现，大大提升开发效率。</li>
-<li>所有我阅读的关于自主开发hexo主题的教程文章的作者。尤其是<a target="_blank" rel="noopener" href="https://blog.csdn.net/smileyan9/article/details/124268248">这一系列文章</a>的作者<a target="_blank" rel="noopener" href="https://smileyan.blog.csdn.net/?type=blog">smile-yan</a>，没有他的文章，Onion主题就不会起步。</li>
+<li>所有我阅读的关于自主开发hexo主题的教程文章的作者。尤其是<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/smileyan9/article/details/124268248">这一系列文章</a>的作者<a
+target="_blank" rel="noopener" href="https://smileyan.blog.csdn.net/?type=blog">smile-yan</a>，没有他的文章，Onion主题就不会起步。</li>
 <li>我的电脑。伟大无需多言。</li>
 </ul>
 <p>我十分敬佩能够完成系列教程文章的作者们，他们的努力是极富意义的。</p>
-<h2 id="设计理念"><a href="#设计理念" class="headerlink" title="设计理念"></a>设计理念</h2><p>Onion主题是一款极简风格、响应式的hexo主题。</p>
+<h2 id="设计理念">设计理念</h2>
+<p>Onion主题是一款极简风格、响应式的hexo主题。</p>
 <p>主题的设计理念是<strong>使创作者能够专注于创作</strong>（不需要考虑除了普通Markdown格式之外的任何格式问题），并且<strong>使读者能够专注于文章内容</strong>，尽可能获得舒适的阅读体验。</p>
-<p>主题支持更强大的Markdown渲染，本地搜索等功能<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint hint--medium hint--rounded hint--bounce" aria-label="部分功能需要安装插件，详见[github仓库](https://github.com/LOnion1124/hexo-onion)">[1]</span></a></sup>，并内置了一些实用的脚本功能，比如目录提取与聚焦、返回顶部等。</p>
+<p>主题支持更强大的Markdown渲染，本地搜索等功能<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span
+class="hint--top hint hint--medium hint--rounded hint--bounce"
+aria-label="部分功能需要安装插件，详见[github仓库](https://github.com/LOnion1124/hexo-onion)">[1]</span></a></sup>，并内置了一些实用的脚本功能，比如目录提取与聚焦、返回顶部等。</p>
 <p>Onion主题的样式基于Bootstrap5框架，这使得我几乎没有自己编写任何一个css文件。我很喜欢Bootstrap5的设计风格，简洁而优雅，用起来也很方便。</p>
 <p>不幸的是，使用Bootstrap5的方式是在元素内部指定class内容，这导致我难以为hexo根据内容渲染的网页内容指定样式。因此，我不得不采取网页脚本的方式为特定元素分配属性，我决定使用jQuery实现这一功能，因此为了正常使用本主题，请务必保证您的前端环境支持jQuery。</p>
-<h2 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h2><p>这部分更加详细的内容会放在介绍文档里。简单地说，除了一般的阅读功能外，我为Onion主题内置了如下功能：</p>
+<h2 id="功能介绍">功能介绍</h2>
+<p>这部分更加详细的内容会放在介绍文档里。简单地说，除了一般的阅读功能外，我为Onion主题内置了如下功能：</p>
 <ul>
 <li>本地搜索</li>
 <li>代码高亮</li>
@@ -296,27 +309,61 @@
 <li>返回顶部按钮</li>
 <li>i18n国际化支持</li>
 </ul>
-<p><strong>为了保证这些功能的正常运行，需要进行一些的插件的安装或者库的引用</strong>，具体方法在<a target="_blank" rel="noopener" href="https://github.com/LOnion1124/hexo-onion">github仓库</a>中给出。</p>
-<h2 id="开发思路"><a href="#开发思路" class="headerlink" title="开发思路"></a>开发思路</h2><p>聊一聊我在部分内容开发时的思路，以及一些未竟的想法。有一种幕后花絮的感觉……</p>
-<h3 id="导航栏和页脚"><a href="#导航栏和页脚" class="headerlink" title="导航栏和页脚"></a>导航栏和页脚</h3><p>这部分参考了Bootstrap5官网给出的<a target="_blank" rel="noopener" href="https://v5.bootcss.com/docs/examples/">模板</a>，加之小小个性化修改即成。<del>只是单纯的懒</del>。</p>
-<h3 id="主页"><a href="#主页" class="headerlink" title="主页"></a>主页</h3><p>灵感同样来自于官网模板，借鉴了卡片样式，自主添加了文章封面图展示功能。</p>
-<h3 id="信息栏（页面侧边栏）"><a href="#信息栏（页面侧边栏）" class="headerlink" title="信息栏（页面侧边栏）"></a>信息栏（页面侧边栏）</h3><p>受到之前使用的Icarus主题的启发，我设计了挂件式的侧边信息展示栏。根据实际页面的不同，它会显示作者信息、文章封面图及摘要或者目录等，并且总是显示站点的分类和标签。我为各个挂件添加了对应的链接功能，方便阅读者实现站内快速跳转。</p>
+<p><strong>为了保证这些功能的正常运行，需要进行一些的插件的安装或者库的引用</strong>，具体方法在<a
+target="_blank" rel="noopener" href="https://github.com/LOnion1124/hexo-onion">github仓库</a>中给出。</p>
+<h2 id="开发思路">开发思路</h2>
+<p>聊一聊我在部分内容开发时的思路，以及一些未竟的想法。有一种幕后花絮的感觉……</p>
+<h3 id="导航栏和页脚">导航栏和页脚</h3>
+<p>这部分参考了Bootstrap5官网给出的<a
+target="_blank" rel="noopener" href="https://v5.bootcss.com/docs/examples/">模板</a>，加之小小个性化修改即成。<del>只是单纯的懒</del>。</p>
+<h3 id="主页">主页</h3>
+<p>灵感同样来自于官网模板，借鉴了卡片样式，自主添加了文章封面图展示功能。</p>
+<h3 id="信息栏页面侧边栏">信息栏（页面侧边栏）</h3>
+<p>受到之前使用的Icarus主题的启发，我设计了挂件式的侧边信息展示栏。根据实际页面的不同，它会显示作者信息、文章封面图及摘要或者目录等，并且总是显示站点的分类和标签。我为各个挂件添加了对应的链接功能，方便阅读者实现站内快速跳转。</p>
 <p>基本上，用于描述个人信息的文本我都进行了封装，使得Onion主题的使用者能够通过改编主题目录下的配置文件来修改显示信息。</p>
-<h3 id="文章页"><a href="#文章页" class="headerlink" title="文章页"></a>文章页</h3><p>标题显眼地放在最上方，右侧设计了信息框展示文章分类和发布时间（由于个人写作习惯，Onion主题被设计为适配单层文章分类，即一篇文章至多一个分类，但可以有多个标签）。标题栏下部展示了文章标签，若文章无标签则展示为占位框。</p>
+<h3 id="文章页">文章页</h3>
+<p>标题显眼地放在最上方，右侧设计了信息框展示文章分类和发布时间（由于个人写作习惯，Onion主题被设计为适配单层文章分类，即一篇文章至多一个分类，但可以有多个标签）。标题栏下部展示了文章标签，若文章无标签则展示为占位框。</p>
 <p>文章主内容框占据主要地位。为了整体美观，Onion主题会将md源文件中的h1、h2标题统一渲染为h3标题并添加下边框，其余标题渲染为h5。侧边栏自动提取文章目录的脚本会统一处理渲染后的h3标题而忽略h5标题。</p>
-<p>我为Markdown文件中的大部分格式添加了对应的样式，相应的效果可以在本站的<a href="https://lonion1124.github.io/posts/80c1e1c6e5fd/">md测试文章</a>里看到.比较值得一提的是Onion主题支持LaTeX渲染（需要加装插件）。</p>
+<p>我为Markdown文件中的大部分格式添加了对应的样式，相应的效果可以在本站的<a
+href="https://lonion1124.github.io/posts/80c1e1c6e5fd/">md测试文章</a>里看到.比较值得一提的是Onion主题支持LaTeX渲染（需要加装插件）。</p>
 <p>代码高亮基于highlight.js，支持指定语言显示。</p>
 <p>我希望实现的效果是在保证创作过程的方便的基础上，尽量使得一切常用的md格式都可以美观且较为符合风格地显示。Onion主题的设计理念是赋能创作者无须在markdown文件里另外写任何除了元数据和普通md格式之外的格式内容，一切美化渲染的工作交给主题完成。我使用的是Typora编辑器，这意味着我只要保证文章在本地渲染正常，它在网页也会是显示正常的。</p>
-<h3 id="归档页"><a href="#归档页" class="headerlink" title="归档页"></a>归档页</h3><p>基于hexo插件的按首字母分类的归档功能。为什么不使用常用按年份归档而改为按首字母？一方面是由于首页文章已经按照发布时间排序了，另一方面我不认为按时间分类就效率而言比按标题分类更加有效率。对于想要查找文章的读者而言，按标题查找显然比按时间查找更为可行。</p>
-<h3 id="侧边弹出栏"><a href="#侧边弹出栏" class="headerlink" title="侧边弹出栏"></a>侧边弹出栏</h3><p>提供了一个存放更多功能的接口，唯一的问题是我目前还没有足够多的功能放进去，因此，它现在仅仅是一个模板。可以在配置文件中选择关闭这个组件。</p>
-<h2 id="进一步美化"><a href="#进一步美化" class="headerlink" title="进一步美化"></a>进一步美化</h2><p>依据之前的经验，还可以为博客网站添加许多所谓的美化功能，比如随机动漫背景图，背景漂浮的线条或者雪花，鼠标点击事件，等等等等。我在两年前建站伊始十分沉迷于这一类小玩意的配置，然而在阅读其他类似的博客网的过程中，我意识到过于多的美化效果其实反而不利于聚焦阅读，这与Onion主题的设计理念背道而驰。因此，我不会在主题中内置任何花里胡哨的效果。当然，或许在后续的开发中我会单独为网站加一些美化效果，但是它们将会是独立的插件，不会与Onion主题合并。</p>
+<h3 id="归档页">归档页</h3>
+<p>基于hexo插件的按首字母分类的归档功能。为什么不使用常用按年份归档而改为按首字母？一方面是由于首页文章已经按照发布时间排序了，另一方面我不认为按时间分类就效率而言比按标题分类更加有效率。对于想要查找文章的读者而言，按标题查找显然比按时间查找更为可行。</p>
+<h3 id="侧边弹出栏">侧边弹出栏</h3>
+<p>提供了一个存放更多功能的接口，唯一的问题是我目前还没有足够多的功能放进去，因此，它现在仅仅是一个模板。可以在配置文件中选择关闭这个组件。</p>
+<h2 id="进一步美化">进一步美化</h2>
+<p>依据之前的经验，还可以为博客网站添加许多所谓的美化功能，比如随机动漫背景图，背景漂浮的线条或者雪花，鼠标点击事件，等等等等。我在两年前建站伊始十分沉迷于这一类小玩意的配置，然而在阅读其他类似的博客网的过程中，我意识到过于多的美化效果其实反而不利于聚焦阅读，这与Onion主题的设计理念背道而驰。因此，我不会在主题中内置任何花里胡哨的效果。当然，或许在后续的开发中我会单独为网站加一些美化效果，但是它们将会是独立的插件，不会与Onion主题合并。</p>
 <p>我想要单独提的一点是看板娘。在建站初期我很魔怔地想要实现一个完美的看板娘，因此碰了不少钉子（详见我合并整理的2022年更新日志）。我承认我目前并没有完全地从魔怔的状态中走出来，因此可能未来我会为网站添加一个可爱的妹子。不过，出于前述的原因，她也不会与Onion主题有什么关系。</p>
 <p>日后我可能会增加评论功能支持、更加复杂的文章标记和分类系统等等。总的来说，一切以加强创作和阅读体验为重。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>碍于本人水平有限，Onion主题的功能远谈不上强大。如果读者愿意尝试为自己的博客使用Onion主题并反馈意见<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint hint--medium hint--rounded hint--bounce" aria-label="在首页可以找到我的邮箱
+<h2 id="总结">总结</h2>
+<p>碍于本人水平有限，Onion主题的功能远谈不上强大。如果读者愿意尝试为自己的博客使用Onion主题并反馈意见<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span
+class="hint--top hint hint--medium hint--rounded hint--bounce"
+aria-label="在首页可以找到我的邮箱
 ">[2]</span></a></sup>，我将感到十分荣幸。</p>
 <p>出于学习交流的目的，我欢迎任何人对Onion主题的修改和增强。</p>
 <p>最后，希望Onion主题能越来越好。</p>
-<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">部分功能需要安装插件，详见<a target="_blank" rel="noopener" href="https://github.com/LOnion1124/hexo-onion">github仓库</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">在首页可以找到我的邮箱<a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div>
+<div id="footnotes">
+<hr>
+<div id="footnotelist">
+<ol style="list-style: none; padding-left: 0; margin-left: 40px">
+<li id="fn:1">
+<span
+style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span
+style="display: inline-block; vertical-align: top; margin-left: 10px;">部分功能需要安装插件，详见<a target="_blank" rel="noopener" href="https://github.com/LOnion1124/hexo-onion">github仓库</a><a href="#fnref:1" rev="footnote">
+↩︎</a></span>
+</li>
+<li id="fn:2">
+<span
+style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span
+style="display: inline-block; vertical-align: top; margin-left: 10px;">在首页可以找到我的邮箱<a href="#fnref:2" rev="footnote">
+↩︎</a></span>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
     </div>
 
     <!-- 前后文章 -->
@@ -325,8 +372,20 @@
       <div class="row">
         <div class="col-1 pe-0">
           
+          <div class="text-end">
+            <a href="/posts/46f360fae708/" class="fs-5 link-secondary link-underline-opacity-0">
+              <button type="button" class="btn btn-sm"><i class="bi bi-chevron-double-left"></i></button>
+            </a>
+          </div>
+          
         </div>
         <div class="col-5 ps-0 border-end border-2">
+          
+          <div class="text-start">
+            <a href="/posts/46f360fae708/" class="fs-5 fw-light link-secondary link-underline-opacity-0">
+              <div class="text-truncate">ML学习笔记（一）：k近邻算法（KNN）</div>
+            </a>
+          </div>
           
         </div>
         <div class="col-5 pe-0 border-start border-2">
@@ -366,12 +425,12 @@
 
     <div class="mt-auto"><footer class="row py-3 mt-4 border-top bg-light">
   <ul class="nav col-md-6 justify-content-center">
-    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><i class="bi bi-c-circle"></i>&nbsp;2024 L_Onion. All rights reserved. </a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><i class="bi bi-c-circle"></i>&nbsp;2024~2025 L_Onion. All rights reserved.</a></li>
   </ul>
 
   <ul class="nav col-md-6 justify-content-center">
     <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">主页</a></li>
-    <li class="nav-item"><a href="" class="nav-link px-2 text-muted">Github</a></li>
+    <li class="nav-item"><a href="" class="nav-link px-2 text-muted">GitHub</a></li>
     <li class="nav-item"><a target="_blank" rel="noopener" href="https://github.com/LOnion1124/hexo-onion" class="nav-link px-2 text-muted">Onion</a></li>
     <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
     <li class="nav-item"><a href="/about" class="nav-link px-2 text-muted">关于</a></li>

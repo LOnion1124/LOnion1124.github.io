@@ -24,7 +24,7 @@
 
 
   <!-- 代码高亮 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs@9.16.2/styles/github.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/styles/base16/papercolor-light.css">
   <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
   
 <script src="/js/use_hl.js"></script>
@@ -41,9 +41,6 @@
   <script src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"> </script>
 
   <!-- LaTeX -->
-  
-<script src="/js/mathjax.js"></script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML" async></script>
 
   <!-- local search -->
@@ -58,7 +55,7 @@
     var path = "/" + search_path;
     searchFunc(path, 'local-search-input', 'local-search-result');
   </script>
-
+  
 <meta name="generator" content="Hexo 7.3.0"></head>
 
 <body>
@@ -136,14 +133,13 @@
 </header></div>
 
     
-    
+
     <div class="px-2 px-md-0">
       <div class="row">
   <div class="col-md-3 offset-md-1 d-none d-md-block">
     <div class="position-sticky" style="top: 2rem;">
 
   <!-- 头像框 -->
-  
   
 
   <!-- 文章页 -->
@@ -152,32 +148,30 @@
   
   <div class="p-2 mb-3 bg-light rounded text-center shadow-sm">
     
-      <div class="pb-2"><img src="/img/wuzhi/cover.jpg" class="img-fluid rounded nofancybox"></div>
+    <div class="pb-2"><img src="/img/wuzhi/cover.jpg" class="img-fluid rounded nofancybox"></div>
     
     
-      <div class="text-muted fs-4 border-bottom pb-1 mb-2"><i class="bi bi-blockquote-left"></i>&nbsp;摘要</div>
-      <div class="p-2 text-muted">——谈“那部作品”和异世界题材</div>
+    <div class="text-muted fs-4 border-bottom pb-1 mb-2"><i class="bi bi-blockquote-left"></i>&nbsp;摘要</div>
+    <div class="p-2 text-muted">——谈“那部作品”和异世界题材</div>
     
   </div>
   
+
   <!-- 目录 -->
   
   
-
   <hr>
-
-  <div class="p-4">
-    <h4 class="fst-italic"><i class="bi bi-folder"></i>&nbsp;分类</h4>
-    <div class="mt-2 px-2 pt-2"><ul class="site-category-list"><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="site-category-list-count">1</span></li><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/">开发日志</a><span class="site-category-list-count">2</span></li><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%8C%87%E5%8D%97/">技术指南</a><span class="site-category-list-count">2</span></li><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a><span class="site-category-list-count">3</span></li></ul></div>
-  </div>
-
-  <hr>
-
+  <!-- 标签 -->
   <div class="p-4">
     <h4 class="fst-italic"><i class="bi bi-tags"></i>&nbsp;标签</h4>
-    <div class="mt-2 px-2 pt-2"><a class="site-tag-link" href="/tags/ACGN/" rel="tag">ACGN<span class="site-tag-count">3</span></a> <a class="site-tag-link" href="/tags/hexo-onion/" rel="tag">hexo-onion<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E6%97%A5%E8%AF%AD/" rel="tag">日语<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔<span class="site-tag-count">1</span></a></div>
+    <div class="mt-2 px-2 pt-2"><a class="site-tag-link" href="/tags/ACGN/" rel="tag">ACGN<span class="site-tag-count">3</span></a> <a class="site-tag-link" href="/tags/KNN/" rel="tag">KNN<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/hexo-onion/" rel="tag">hexo-onion<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E6%97%A5%E8%AF%AD/" rel="tag">日语<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔<span class="site-tag-count">1</span></a></div>
   </div>
-
+  <hr>
+  <!-- 分类 -->
+  <div class="p-4">
+    <h4 class="fst-italic"><i class="bi bi-folder"></i>&nbsp;分类</h4>
+    <div class="mt-2 px-2 pt-2"><ul class="site-category-list"><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="site-category-list-count">2</span></li><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/">开发日志</a><span class="site-category-list-count">2</span></li><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%8C%87%E5%8D%97/">技术指南</a><span class="site-category-list-count">2</span></li><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a><span class="site-category-list-count">3</span></li></ul></div>
+  </div>
   <hr>
 </div>
 
@@ -242,35 +236,53 @@
         <a href="/tags/ACGN/" class="link-secondary link-underline-opacity-0">
           <i class="bi bi-tags"></i>
           ACGN
-        </a></span>
+        </a>
+      </span>
       
       
+      <!-- 字数统计 -->
+      <span class="me-1 badge border text-secondary">
+        <i class="bi bi-bar-chart"></i>
+        7.3k
+      </span>
+      <!-- 阅读时长 -->
+      <span class="me-1 badge border text-secondary">
+        <i class="bi bi-stopwatch"></i>
+        6 min
+      </span>
     </div>
 
     <div class="article p-4 pb-0 h-auto border rounded shadow-sm">
-      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>作品简介传送门：<a target="_blank" rel="noopener" href="https://bangumi.tv/subject/101114">Bangumi介绍页</a>||<a target="_blank" rel="noopener" href="https://zh.moegirl.org.cn/无职转生～到了异世界就拿出真本事～">萌娘百科介绍页</a></p>
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>作品简介传送门：<a
+target="_blank" rel="noopener" href="https://bangumi.tv/subject/101114">Bangumi介绍页</a>||<a
+target="_blank" rel="noopener" href="https://zh.moegirl.org.cn/无职转生～到了异世界就拿出真本事～">萌娘百科介绍页</a></p>
 <p>《无职转生～到了异世界就拿出真本事～》（下文简称《无职》）是陪伴了我相当长一段时间的作品，它对我的意义重大且特殊。不过，我不准备啰嗦那些琐事。趁着补完小说之际，我想像做阅读理解那样来分析一下这部作品的优秀之处，以及写一写我对于现在普遍的异世界题材（通称“厕纸”）的一些看法。</p>
 <p>本文不可避免的有剧透。文中对小说和动漫均有涉及，但以小说为主。（动漫可以说做得精妙绝伦，对于原作党来说无可指摘）</p>
-<p><img src="/img/wuzhi/wife.jpg" alt="" title="“三原色”"></p>
-<hr>
+<p><img src="/img/wuzhi/wife.jpg" title="“三原色”" /></p>
+<hr />
 <p>先谈谈个人感受吧。</p>
 <p>我很喜欢这部作品。可以说它是我最喜欢的作品之一。如果将来有研究轻小说的课程，而我是那门课程的老师的话，我会把《无职》作为“优秀异世界作品”的典型来讲。为什么这么说呢，因为在我看来，<strong>《无职》才是对得起“异世界作品”这一名号的作品。</strong></p>
-<p>我在 <a href="https://lonion1124.github.io/2022/12/21/入宅四年——补番推荐个人榜/">入宅四年——补番推荐个人榜</a> 这篇博客里这么说：</p>
+<p>我在 <a
+href="https://lonion1124.github.io/2022/12/21/入宅四年——补番推荐个人榜/">入宅四年——补番推荐个人榜</a>
+这篇博客里这么说：</p>
 <blockquote>
 <p>无职作为最早的那一批作品，真正创造出了大有可为的异世界。</p>
 </blockquote>
 <p>异世界是什么？是一个充满着幻想的，不同于我们这个世界的世界。这是一个能供创作者尽情发挥想象与才情，不用顾忌现实的条条框框，可以大刀阔斧地创造的舞台。因此在我看来，异世界作品从来都是最难以创作的作品类型之一，因为作者需要具备堪比上帝的能力。然而很可惜的是，现在很多作家把异世界当成了一种发泄简单欲望的工具。我想说，那些“厕纸”作品，根本不配称为异世界作品。“厕纸”的世界，并不能够称之为一个世界。它不具有一个世界应该有的内涵和厚度，不具有一个世界应该有的文化和魅力。它像童话一般单纯，却又夹杂着成年人的欲望和冲动。归根到底，它们只是作者以“异世界”为突破口，倾泻出来的对现实不满的消极逃避心理的简单映射而已。他们没有意识到：异世界也是一整个世界。异世界应该有不明显亚于真实世界的厚度。这种厚度可以是社会的复杂，人性的矛盾，或者是某些无法消弭的苦难和困惑。当然根据作品的定位，这些要素可以适当简略，不过它们依然是必要的。</p>
 <p>很幸运的是，《无职》满足了这些要求。它就像轻小说中的严肃文学一样，对很多重大的课题进行了思考与讨论。这正是这部作品吸引人的地方。当然，它并没有因此削减其中“轻”的部分，或者说媚宅成分，因此读者依然大可以轻松地阅读它。我所说的“严肃性”，在于更加隐蔽的一些方面，我将分几个部分来介绍。</p>
-<h2 id="设定"><a href="#设定" class="headerlink" title="设定"></a>设定</h2><p>幻想作品区别于其他作品最重要之处，便在于它需要庞大的设定内容。对我个人而言，这正是异世界作品魅力的最大来源。这种设定内容包含了地理、生态、历史、环境、文化、风俗等几乎一切方面。很多爽文都忽略了设定的重要性，以为只要画一张世界地图便算创造了异世界，结果作品最终的表现就像中世纪欧洲人全体搬了个家（更不用说很多作者连中世纪欧洲人的感觉都写不出来）。设定的不完善正是这些作品的廉价感的来源。因此对于异世界作品来说，一套详尽的、自洽的设定就像地基一样重要。</p>
+<h2 id="设定">设定</h2>
+<p>幻想作品区别于其他作品最重要之处，便在于它需要庞大的设定内容。对我个人而言，这正是异世界作品魅力的最大来源。这种设定内容包含了地理、生态、历史、环境、文化、风俗等几乎一切方面。很多爽文都忽略了设定的重要性，以为只要画一张世界地图便算创造了异世界，结果作品最终的表现就像中世纪欧洲人全体搬了个家（更不用说很多作者连中世纪欧洲人的感觉都写不出来）。设定的不完善正是这些作品的廉价感的来源。因此对于异世界作品来说，一套详尽的、自洽的设定就像地基一样重要。</p>
 <p>不过，原创一套世界人文地理和历史当然太过于困难了。因此如何恰当的借鉴或改变现有素材是创作时非常重要的内容。为什么这么多异世界作品以中世纪欧洲为创作蓝本？因为那个时期给人们的感觉神秘而具有一种文化上的风味和美感，契合了多数异世界作品的基调。因此作者便把中世纪欧洲拿来，砍掉一些元素再加入一些元素，开始创作。</p>
 <p>在这一点上，《无职》也没能免俗。它作为最早的那一批异世界作品之一，其设定基本上使用了欧洲复古的那一套东西：王国、贵族、骑士。再加上西幻的魔法、龙、勇者，以及日式rpg的冒险者工会、兽耳娘、美女精灵，最后佐之以老套的战争历史背景。收工。少数能够一提的新颖设定是它关于“魔族”概念的设定。不同的魔族被赋予了不同特质，使得它们与其被称为魔族，不如更像是拥有特异功能的人类。然而这种种族设定很巧妙地为整个作品添加了生动性。背负悲剧的斯佩路德族、不善言辞的米格路德族、乐观豪放看淡时间的不死魔族等等，这些人物巧妙地为读者提供了一种新的视角和思考立足点。以这些人物为中心的情节也可以借此做到有新意。</p>
-<p><img src="/img/wuzhi/qixilika.jpg" alt="" title="“魔界大帝”奇希莉卡·奇希里斯"></p>
+<p><img src="/img/wuzhi/qixilika.jpg"
+title="“魔界大帝”奇希莉卡·奇希里斯" /></p>
 <p>不过基本上，这些东西仍然是大家都熟悉的。然而《无职》的优秀体现在它对于设定的内容的处理上。在作品中，作者很认真地去展现了这个世界运作的原理，去还原各阶级各身份的人物表现。作品中的人物会设身处地地去做出推进情节的行为——让贵族像个贵族，让国王像个国王。这种与真实世界稍异的常识被各种细节很真切地描绘出来，正是这种细节展现出了设定的存在感。</p>
 <p>这里我想举《哈利波特》为例子。这部如雷贯耳的幻想小说中对于魔法世界的刻画之生动形象是公认的。请回想一下书中哪些细节让你产生了对于魔法世界的亲近感——我想很多人一下子想不起来。这就是它的高明之处，它将幻想元素作为一种“气氛”融入了作品里，无处不在而又难以言明。它使得魔法世界具有了沙盒那样的可拓展性。这正是设定极其自然时能够达到的境界。当然，《无职》还远没有达到《哈利波特》那种境界，不过在世界设定的完善程度上，已经超过大部分轻小说了。</p>
-<p><strong>更重要的一点是：设定是为情节服务的。</strong>在《无职》中，几乎提到的每一块大陆、每一个国家都曾经作为舞台发生过特定的情节，这就是很难能可贵的一件事。当然，这也与《无职》的故事大部分以旅途奔波为主有一定关联，但不得不承认的是它很好地借助这种方式还原了一个相当辽阔的世界。</p>
-<p><img src="/img/wuzhi/modalu.jpg" alt=""></p>
+<p><strong>更重要的一点是：设定是为情节服务的</strong>。在《无职》中，几乎提到的每一块大陆、每一个国家都曾经作为舞台发生过特定的情节，这就是很难能可贵的一件事。当然，这也与《无职》的故事大部分以旅途奔波为主有一定关联，但不得不承认的是它很好地借助这种方式还原了一个相当辽阔的世界。</p>
+<p><img src="/img/wuzhi/modalu.jpg" /></p>
 <p>而说到情节，下面就来聊一聊这个任何小说都逃不开的内容。</p>
-<h2 id="情节"><a href="#情节" class="headerlink" title="情节"></a>情节</h2><p>一个社会渣滓转生了。被泥头车创死，投胎到剑与魔法的世界。</p>
+<h2 id="情节">情节</h2>
+<p>一个社会渣滓转生了。被泥头车创死，投胎到剑与魔法的世界。</p>
 <p>啊，多么熟悉的美妙开局。</p>
 <p>读者读到这里，脑海中大概已经能够描绘出这样一个故事了：主角获得一个莫名其妙的外挂，然后开始扮猪吃虎或者大开无双，一路上妹子投怀送抱，接着谈笑间打倒一个谐星似的终极反派，最后像个巨婴一样享受后宫生活。</p>
 <p>嗯，这种开篇最近确实都是这个调调。不过事实究竟是怎样呢？</p>
@@ -280,31 +292,33 @@
 <p>父亲保罗在信中告诉鲁迪驱逐他的理由：为了帮助他和他的青梅竹马希露菲学会独立生活顺利成长，要将他们分开。</p>
 <p>细心的读者可能会发现，<strong>这个细节其实已经体现出作者关于“成长”这一话题的思考</strong>。“成长”也正是整本书的主线，作者想要展现男主是如何通过一次次事件，从一个废物蜕变成为一个能够独当一面的大人的。</p>
 <p>而如果剧情的主线是“成长”，那么这本书的基调便也基本确定了。<strong>因为人生不可能一帆风顺，失败和挫折往往能让人学到更多。</strong>责任和束缚会促使人成长，而这些要素往往都是沉重的。也就是说，从第二卷伊始，《无职》将彻底告别爽文式的一帆风顺，男主要去经历社会的毒打了。</p>
-<p><img src="/img/wuzhi/xilufei.jpg" alt=""></p>
+<p><img src="/img/wuzhi/xilufei.jpg" /></p>
 <p>第二卷中，鲁迪成为了娇蛮千金艾莉丝的家庭教师，眼看就要适应生活的时候，发生了全书最重要的事件——“转移”。</p>
 <p>纵观全书，我可以明确地做出这个判断：《无职》的故事，从这里真正开始。</p>
 <p>在这次的事件中，方圆数百里的区域（包括男主家乡）的人被随机传送到了世界各地，男主的家业一下子清零。不提亲友的失踪，男主自己也被转移到了世界另一端的魔大陆，自身难保。</p>
 <p>第一次看到这里，我感觉就像被扇了一巴掌。大概也就是从那时起我真正摆正了心态来阅读这本书。而在二刷时，我不禁思考作者在设计情节时候的用意。名叫“转移”的这次事件，多么像人生中的飞来横祸。就像某一位博主说的，<strong>这个世界不是说你只要没有错就可以过的很好的。</strong>当你以为人生步入了正轨，生活总是会来一点出其不意。作者也许是在借此映射人生。</p>
 <p>好在男主还年轻，还有资本去闯一闯。他接受建议、锻炼身体、寻求援助、保护弱者，偶尔刷一刷小聪明或者犯下错误，但始终肩负起保护艾莉丝的责任。在这个过程中，我们可以清楚地看见鲁迪的人物形象变得越来越立体，与传统的爽文男主形象渐行渐远。他会冷静地分析利弊、为了保全自己和伙伴绞尽脑汁、为了化解危机不惜舍弃尊严下跪。我们会看见他在成长的过程中屡屡碰壁，犯下小错或大错，有时饥不择食慌不择路，有时甚至造成无谓的牺牲。这些是传统爽文绝对不会出现的内容，因为这些情节意味着男主不是完人。<strong>然而，在男主与完人渐行渐远的路上，他距离一个真实成熟的人便越来越近。</strong></p>
-<p><img src="/img/wuzhi/ailisi.gif" alt=""></p>
+<p><img src="/img/wuzhi/ailisi.gif" /></p>
 <p>在长途跋涉后，鲁迪见到了他的父亲。也许读者在期待一次喜极而泣的欢喜重逢，不过作者再一次沉重地斩断了幻想——男主被误解，与父亲大打出手，甚至对妹妹造成了心理阴影。这一段的剧情表现张力极大，是我最喜欢的几段情节之一。不过我之所以在这里提起它，是因为<strong>从中我们可以看出作者在书中反复提及的第二个关键词：亲情</strong>。家人之间的羁绊是全书最重要的线索和动机之一。而亲情也正是一个人生命中始终伴随着他的情感的一种，这与小说的成长主题不谋而合。</p>
 <p>故事接着发展，男主与希露菲重逢并结婚，成家立业。</p>
 <p>好，到此为止，一般成长小说所涵盖的内容基本已经完满了。主角都结婚了欸！拜托，你见过几本轻小说会在主角婚后继续写下去的啊！确实，对于轻小说所瞄准的青少年读者市场而言，结婚确实已经是读者能够有所共鸣的最遥远的事情了，是最适合作为童话故事大结局的事件之一。不过《无职》早已通过之前的铺垫告诉了读者它绝不是任何童话，结婚仅仅只是漫漫人生的一个中转站。</p>
 <p>是啊，“转移”事件的创伤还完全没有被抚平，男主的母亲依然下落不明，他作为一个人的目的还远没有达到，故事当然不能就这么结束了。于是他搜寻情报，前往远方营救被困的母亲，在这个过程中，父亲死了、母亲虽得救却成为废人、男主失去了一只手。最后，他抱着说不清的心情回到家，与曾经的老师、现在的同伴洛琪希结婚。</p>
 <p>这一段情节很有意思，它很复杂，不好说成功或失败。<strong>就像是现实中的大部分事情，有苦有甜，甜苦夹杂，在得到的同时也失去着。</strong></p>
 <p>接下来一段剧情又足以令读者头皮发麻：老鲁迪乌斯（是的，也就是未来的鲁迪本人）从未来回到现在与鲁迪见面。</p>
-<p><img src="/img/wuzhi/laoludi.jpg" alt=""></p>
+<p><img src="/img/wuzhi/laoludi.jpg" /></p>
 <p>老鲁迪的现状堪称晚景凄凉——妻子丧生，众叛亲离，本人也变得偏执而疯狂。而令人意外的是，老鲁迪的实力无比强悍，就连现在的鲁迪直到结局到没能达到那个层次。也许这是作者在体现“逆境使人变强”的道理吧。不过，这段剧情最大的作用，在于给现在的鲁迪和读到这里的所有读者来了一记“警世钟”——带着众人亲临了一次失去一切的体验。而有句话说得好，“<strong>直到你失去，你都不会意识你曾拥有</strong>。”作者让所有人藉此深刻体验到了现在一切的来之不易，于是顺理成章地想要守护者一切。这就是这段剧情的意义：一次与未来的会面，激发了之后剧情发展的最大动机。<strong>也因此，《无职》显露出了它的第三个关键词：责任</strong>。</p>
 <p>谈到成长，责任的哲学是绕不开的话题。至此，《无职》的中心思想已经来到了一个鲜有异世界作品，甚至可以说鲜有轻小说曾达到的深度。在责任的驱动下，诞生了我认为是小说中最具代表性的情节：鲁迪为了保护家人，屈服于威胁的源头、反派人物“人神”，不计一切代价与能力远超自身的正派人物“龙神”对战，并惨败。</p>
-<p><img src="/img/wuzhi/longshen.jpg" alt=""></p>
+<p><img src="/img/wuzhi/longshen.jpg" /></p>
 <p>好，各位，一般的小说中这种事情是反过来的吧？主角不是应该抱着某些老英雄的大腿横扫一切邪恶吗？在这里，我要说的是：这就是《无职》关于个人成长的思考的最鲜明体现之一。<strong>主角自始自终都为了一个明确的目标奋斗：守护自己所奋斗来的一切——具体地说，他的家</strong>。因此，正派或邪派根本无所谓，只有能否为鲁迪的家人提供庇护之分。而至鲁迪彻底认清哪些人无法庇护他之前，他还需要吃些苦头。</p>
 <p>于是，鲁迪拼上一切对战龙神，并被闪亮登场的艾莉丝救下，转投成为龙神手下，然后跟艾莉丝结婚。这一段剧情还是挺一帆风顺的，说明《无职》本质上还是一部轻小说。</p>
 <p>再之后，鲁迪总和至今为止的一切人脉，不过仍遭遇了朋友背叛的桥段。不过不得不说在经历了之前的那么多剂猛药之后这段剧情竟然显得并不惊人。也许这就是阅历带给人的沉稳吧。一部小说能够使读者达到这种境界也十分有水准了。</p>
-<hr>
+<hr />
 <p>《无职》的主要剧情至此基本分析的七七八八，我主要挑出了我个人觉得最亮眼的部分，最能够使《无职》与一般厕纸区别开的部分。而这些部分，佐以一般轻小说的萌妹子和喜剧元素调节节奏，便成就了极佳的阅读体验。</p>
 <p>纵观全书，小说从一个社会渣滓的无故横死开始，以一个人生赢家的寿终正寝结束——围绕着“鲁迪乌斯·格雷拉特”这个人的成长经历，展现了一幅辽阔而生动的奇幻世界图景。各方面的完成度都极佳，作者的文笔也可以称为令人舒适（这里应该更要感谢翻译作品的各位大佬）。在我有限的认知里，这样的好作品难得一遇。</p>
-<p><img src="/img/wuzhi/quanjiafu.jpg" alt="" title="小说最终卷封面：鲁迪全家福"></p>
-<h2 id="杂谈"><a href="#杂谈" class="headerlink" title="杂谈"></a>杂谈</h2><p>我至今任很庆幸我在身心摇摆不定的成长年纪里遇见了这部作品，虽然我本人说不清楚，但我可以肯定它带给我不小的影响。此外，它的动画版上映之初掀起的那场网络风暴，也给初识互联网、不谙世事的我来了一次“醍醐灌顶”——应该说我现在的互联网免疫力有一半来源于此……真是奇妙的缘分。</p>
+<p><img src="/img/wuzhi/quanjiafu.jpg"
+title="小说最终卷封面：鲁迪全家福" /></p>
+<h2 id="杂谈">杂谈</h2>
+<p>我至今任很庆幸我在身心摇摆不定的成长年纪里遇见了这部作品，虽然我本人说不清楚，但我可以肯定它带给我不小的影响。此外，它的动画版上映之初掀起的那场网络风暴，也给初识互联网、不谙世事的我来了一次“醍醐灌顶”——应该说我现在的互联网免疫力有一半来源于此……真是奇妙的缘分。</p>
 <p>“个人传记”类型的小说，在文学史上拥有很重的分量。在我看来，此类作品之所以令人难以忘怀，主要因为我们可以透过主人公的人生思考自身的一些问题。这里我举狄更斯的《大卫·科波菲尔》为例子，这是一部最为典型的人物中心的小说作品。一个人出生、成长、学习、失败、奋斗、老去——他生命中经历各种各样的事、遇到形形色色的人，想把这些整合进一部小说，其难度无比之大。因为，它想表现的基本上是我们人类能够切身思考的最宏大的话题：人生。回到《无职》这部作品，它本身可能没有那么多令人拍案叫绝的精妙桥段，但是它做到了生动地去体现一个人这一生的一切，遑论它还为其创造了一个栩栩如生的异世界，这无疑是一大壮举。自然受题材影响，它的故事并不及《大卫·科波菲尔》那般严肃（虽然这么说，不过事实上《大卫·科波菲尔》基本上也算是当时的“轻小说”了），但这对于我们这样的读者来说自然不是问题。<strong>作为一部轻小说，它还有什么能被我们进一步苛求的呢</strong>。</p>
 <p>不少网友评价《无职》为“史诗一般的小说”。我非常赞成这种说法。我在写这篇评价时，找不到一个鲜明的方面来作结。正如上文所言，它的主题是“人生”，而我所能想到的一切人文的作品的主题基本都在这两个字的框架之下。我可以谈毅力，可以谈追梦，可以谈勇气，可以谈爱与友情——一切都被囊括在“人生”这个短短的词当中。我的阅历尚还很浅，而世界上的“史诗”的作品还有很多，我自然不敢于高谈阔论。</p>
 <p>当下，我展望“人生”这个词的时候，我想到了这无比广阔的世界。而当十几年，几十年过去之后，我又会因什么契机想到这个话题？我又会想到什么呢？</p>
@@ -371,12 +385,12 @@
 
     <div class="mt-auto"><footer class="row py-3 mt-4 border-top bg-light">
   <ul class="nav col-md-6 justify-content-center">
-    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><i class="bi bi-c-circle"></i>&nbsp;2024 L_Onion. All rights reserved. </a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><i class="bi bi-c-circle"></i>&nbsp;2024~2025 L_Onion. All rights reserved.</a></li>
   </ul>
 
   <ul class="nav col-md-6 justify-content-center">
     <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">主页</a></li>
-    <li class="nav-item"><a href="" class="nav-link px-2 text-muted">Github</a></li>
+    <li class="nav-item"><a href="" class="nav-link px-2 text-muted">GitHub</a></li>
     <li class="nav-item"><a target="_blank" rel="noopener" href="https://github.com/LOnion1124/hexo-onion" class="nav-link px-2 text-muted">Onion</a></li>
     <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
     <li class="nav-item"><a href="/about" class="nav-link px-2 text-muted">关于</a></li>

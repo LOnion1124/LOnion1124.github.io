@@ -24,7 +24,7 @@
 
 
   <!-- 代码高亮 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs@9.16.2/styles/github.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/styles/base16/papercolor-light.css">
   <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
   
 <script src="/js/use_hl.js"></script>
@@ -41,9 +41,6 @@
   <script src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"> </script>
 
   <!-- LaTeX -->
-  
-<script src="/js/mathjax.js"></script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML" async></script>
 
   <!-- local search -->
@@ -58,7 +55,7 @@
     var path = "/" + search_path;
     searchFunc(path, 'local-search-input', 'local-search-result');
   </script>
-
+  
 <meta name="generator" content="Hexo 7.3.0"></head>
 
 <body>
@@ -136,14 +133,13 @@
 </header></div>
 
     
-    
+
     <div class="px-2 px-md-0">
       <div class="row">
   <div class="col-md-3 offset-md-1 d-none d-md-block">
     <div class="position-sticky" style="top: 2rem;">
 
   <!-- 头像框 -->
-  
   
 
   <!-- 文章页 -->
@@ -153,37 +149,35 @@
   <div class="p-2 mb-3 bg-light rounded text-center shadow-sm">
     
     
-      <div class="text-muted fs-4 border-bottom pb-1 mb-2"><i class="bi bi-blockquote-left"></i>&nbsp;摘要</div>
-      <div class="p-2 text-muted">换电脑之后如何继续让博客正常运转呢？</div>
+    <div class="text-muted fs-4 border-bottom pb-1 mb-2"><i class="bi bi-blockquote-left"></i>&nbsp;摘要</div>
+    <div class="p-2 text-muted">换电脑之后如何继续让博客正常运转呢？</div>
     
   </div>
   
+
   <!-- 目录 -->
   
-    <div class="p-2 mb-3 border rounded shadow-sm">
-      <div class="text-center fs-4 text-muted border-bottom pb-1 mb-2"><i class="bi bi-bookmark-dash"></i>&nbsp;目录</div>
-      <div id="toc" class="px-2"></div>
-      
+  <div class="p-2 mb-3 border rounded shadow-sm">
+    <div class="text-center fs-4 text-muted border-bottom pb-1 mb-2"><i class="bi bi-bookmark-dash"></i>&nbsp;目录</div>
+    <div id="toc" class="px-2"></div>
+    
 <script src="/js/toc.js"></script>
 
-    </div>
-  
-  
-
-  <hr>
-
-  <div class="p-4">
-    <h4 class="fst-italic"><i class="bi bi-folder"></i>&nbsp;分类</h4>
-    <div class="mt-2 px-2 pt-2"><ul class="site-category-list"><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="site-category-list-count">1</span></li><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/">开发日志</a><span class="site-category-list-count">2</span></li><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%8C%87%E5%8D%97/">技术指南</a><span class="site-category-list-count">2</span></li><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a><span class="site-category-list-count">3</span></li></ul></div>
   </div>
-
+  
+  
   <hr>
-
+  <!-- 标签 -->
   <div class="p-4">
     <h4 class="fst-italic"><i class="bi bi-tags"></i>&nbsp;标签</h4>
-    <div class="mt-2 px-2 pt-2"><a class="site-tag-link" href="/tags/ACGN/" rel="tag">ACGN<span class="site-tag-count">3</span></a> <a class="site-tag-link" href="/tags/hexo-onion/" rel="tag">hexo-onion<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E6%97%A5%E8%AF%AD/" rel="tag">日语<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔<span class="site-tag-count">1</span></a></div>
+    <div class="mt-2 px-2 pt-2"><a class="site-tag-link" href="/tags/ACGN/" rel="tag">ACGN<span class="site-tag-count">3</span></a> <a class="site-tag-link" href="/tags/KNN/" rel="tag">KNN<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/hexo-onion/" rel="tag">hexo-onion<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E6%97%A5%E8%AF%AD/" rel="tag">日语<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔<span class="site-tag-count">1</span></a></div>
   </div>
-
+  <hr>
+  <!-- 分类 -->
+  <div class="p-4">
+    <h4 class="fst-italic"><i class="bi bi-folder"></i>&nbsp;分类</h4>
+    <div class="mt-2 px-2 pt-2"><ul class="site-category-list"><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="site-category-list-count">2</span></li><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/">开发日志</a><span class="site-category-list-count">2</span></li><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%8C%87%E5%8D%97/">技术指南</a><span class="site-category-list-count">2</span></li><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a><span class="site-category-list-count">3</span></li></ul></div>
+  </div>
   <hr>
 </div>
 
@@ -243,6 +237,16 @@
     <!-- 标签 -->
     <div class="py-2">
       
+      <!-- 字数统计 -->
+      <span class="me-1 badge border text-secondary">
+        <i class="bi bi-bar-chart"></i>
+        2.6k
+      </span>
+      <!-- 阅读时长 -->
+      <span class="me-1 badge border text-secondary">
+        <i class="bi bi-stopwatch"></i>
+        2 min
+      </span>
     </div>
 
     <div class="article p-4 pb-0 h-auto border rounded shadow-sm">
@@ -250,35 +254,49 @@
 <p>虽然很伤心，不过伤心的是陪我4年的朋友突然离去。该骂还是要骂：实体店那帮人塞给我的这个型号的品控是真的不行。不过其中也有当年我购买设备经验不足（千万别去实体店！）导致的诸多因素在内，所以也没什么可以怨恨的。总之只能接受这个事实。现在我的网购新电脑到了，使用体验良好，所以就这样吧……这也许就是有了新欢忘了旧爱吧（笑</p>
 <p>然后，关于这个个人博客，由于它的运行原理是本地文件部署至github仓库，所以在更换电脑之后就要重新设置其中的连接。我将其步骤记录在这篇文章里（我希望5年内我不会再用到这个）。</p>
 <p>顺带一提，我7月中旬就写好了这篇博客，这是因为我当时以为我已经成功了，然而事实证明我根本没有成功。但是之后因为各种各样的事情耽误了，于是就拖到现在。</p>
-<p>主要的步骤来源于<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34243930/article/details/103956419">这篇博客</a>。</p>
-<h2 id="安装必要程序"><a href="#安装必要程序" class="headerlink" title="安装必要程序"></a>安装必要程序</h2><p>新电脑上需要重新安装Node.js和Git</p>
-<p>可以参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/wapchief/article/details/54602515">这篇博客</a>。</p>
-<h2 id="拷贝原来的本地文件"><a href="#拷贝原来的本地文件" class="headerlink" title="拷贝原来的本地文件"></a>拷贝原来的本地文件</h2><p>好在我的硬盘没坏，里面的文件可以拷贝出来。</p>
+<p>主要的步骤来源于<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34243930/article/details/103956419">这篇博客</a>。</p>
+<h2 id="安装必要程序">安装必要程序</h2>
+<p>新电脑上需要重新安装Node.js和Git</p>
+<p>可以参考<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/wapchief/article/details/54602515">这篇博客</a>。</p>
+<h2 id="拷贝原来的本地文件">拷贝原来的本地文件</h2>
+<p>好在我的硬盘没坏，里面的文件可以拷贝出来。</p>
 <p>将原来的本地文件（即根目录）拷贝至新电脑。我依然是在D盘里建立了blog文件夹存放相关文件。</p>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>在刚刚拷贝的文件夹中右键，选择“git bash here”，然后键入下列代码：</p>
-<pre><code>npm install hexo-cli -g
-</code></pre><p>即可安装hexo</p>
+<h2 id="安装hexo">安装hexo</h2>
+<p>在刚刚拷贝的文件夹中右键，选择“git bash here”，然后键入下列代码：</p>
+<pre><code>npm install hexo-cli -g</code></pre>
+<p>即可安装hexo</p>
 <p><strong>注意，需要在博客本地文件的文件夹中安装。</strong></p>
 <p>接着键入如下代码检查是否安装成功：</p>
-<pre><code>hexo -v
-</code></pre><p>注1：7月份这一步没有成功，这是因为新电脑配备了禁止运行脚本的安全策略。通过<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2">这里</a>介绍的方法可以将该策略修改。</p>
-<p>注2：因为魔法原因，npm的下载速度很慢，所以后来我使用了cnpm（即npm中国版）代为下载。操作方法见<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46306193/article/details/124026161">这里</a>。</p>
-<p>注3：7月份失败的另一个原因是电脑阻止了npm的安装程序安装hexo，解决这个问题的方法是在git bash窗口中运行以下代码：</p>
-<pre><code>cnpm install --force
-</code></pre><h2 id="生成新电脑的ssh值"><a href="#生成新电脑的ssh值" class="headerlink" title="生成新电脑的ssh值"></a>生成新电脑的ssh值</h2><p>还是在“git bash here”里面，输入下列代码：</p>
-<pre><code>ssh-keygen -t rsa -C &quot;邮箱地址&quot;
-</code></pre><p>其中“邮箱地址”（含引号）替换为在注册github时绑定的邮箱地址。</p>
+<pre><code>hexo -v</code></pre>
+<p>注1：7月份这一步没有成功，这是因为新电脑配备了禁止运行脚本的安全策略。通过<a
+target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2">这里</a>介绍的方法可以将该策略修改。</p>
+<p>注2：因为魔法原因，npm的下载速度很慢，所以后来我使用了cnpm（即npm中国版）代为下载。操作方法见<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46306193/article/details/124026161">这里</a>。</p>
+<p>注3：7月份失败的另一个原因是电脑阻止了npm的安装程序安装hexo，解决这个问题的方法是在git
+bash窗口中运行以下代码：</p>
+<pre><code>cnpm install --force</code></pre>
+<h2 id="生成新电脑的ssh值">生成新电脑的ssh值</h2>
+<p>还是在“git bash here”里面，输入下列代码：</p>
+<pre><code>ssh-keygen -t rsa -C &quot;邮箱地址&quot;</code></pre>
+<p>其中“邮箱地址”（含引号）替换为在注册github时绑定的邮箱地址。</p>
 <p>然后连续点回车直到该命令执行结束。</p>
 <p>接着，在它打印的语句中找到其中有一个“id_rsa.pub”的文件路径，通过这个路径打开这个文件（用记事本打开即可），里面就是新电脑的ssh值。</p>
-<h2 id="将ssh添加至github"><a href="#将ssh添加至github" class="headerlink" title="将ssh添加至github"></a>将ssh添加至github</h2><p>登录网页端github，点击右上角个人头像，在下拉菜单中选择“settings”选项，然后在右边栏选择“SSH and GPG keys”，点击“new SSH keys”，取名并将刚才生成的ssh值复制进去。</p>
+<h2 id="将ssh添加至github">将ssh添加至github</h2>
+<p>登录网页端github，点击右上角个人头像，在下拉菜单中选择“settings”选项，然后在右边栏选择“SSH
+and GPG keys”，点击“new SSH keys”，取名并将刚才生成的ssh值复制进去。</p>
 <p>添加成功后，在“SSH and GPG keys”界面中会出现刚刚新添加的内容。</p>
-<h2 id="换源"><a href="#换源" class="headerlink" title="换源"></a>换源</h2><p>最后一步了！</p>
+<h2 id="换源">换源</h2>
+<p>最后一步了！</p>
 <p>回到本地博客文件夹，进入“git bash here”窗口。</p>
 <p>键入下列代码</p>
-<pre><code>npm config set registry &quot;repository地址&quot;
-</code></pre><p>其中“repository地址”（含引号）替换为原先的配置文件（“_config.yml”，应该在根目录中）里面的“repository: ”之后的网址。</p>
+<pre><code>npm config set registry &quot;repository地址&quot;</code></pre>
+<p>其中“repository地址”（含引号）替换为原先的配置文件（“_config.yml”，应该在根目录中）里面的“repository:
+”之后的网址。</p>
 <p>这一步成功后，就可以像之前一样写博客上传了。</p>
-<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>真是相当麻烦……当然，主要是因为我并非专业人员，仅仅是一介学生罢了。不过即使是在学生中，也不乏诸多技术高到令人瞠目结舌的人物。因此，这也不是抱怨的借口。</p>
+<h2 id="感想">感想</h2>
+<p>真是相当麻烦……当然，主要是因为我并非专业人员，仅仅是一介学生罢了。不过即使是在学生中，也不乏诸多技术高到令人瞠目结舌的人物。因此，这也不是抱怨的借口。</p>
 <p>这个博客从4月初运行至今，正经文章没写几篇，大部分时间都花在各种折腾与优化上了。在折腾的过程中，我也认识到，折腾总是会结束的。不是我与困难达成共识，就是困难与我达成共识，终归到底是我与自己达成共识。总之，这个博客我希望一直能运行下去，路漫漫其修远兮，吾将上下而求索。</p>
 
     </div>
@@ -342,12 +360,12 @@
 
     <div class="mt-auto"><footer class="row py-3 mt-4 border-top bg-light">
   <ul class="nav col-md-6 justify-content-center">
-    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><i class="bi bi-c-circle"></i>&nbsp;2024 L_Onion. All rights reserved. </a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><i class="bi bi-c-circle"></i>&nbsp;2024~2025 L_Onion. All rights reserved.</a></li>
   </ul>
 
   <ul class="nav col-md-6 justify-content-center">
     <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">主页</a></li>
-    <li class="nav-item"><a href="" class="nav-link px-2 text-muted">Github</a></li>
+    <li class="nav-item"><a href="" class="nav-link px-2 text-muted">GitHub</a></li>
     <li class="nav-item"><a target="_blank" rel="noopener" href="https://github.com/LOnion1124/hexo-onion" class="nav-link px-2 text-muted">Onion</a></li>
     <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
     <li class="nav-item"><a href="/about" class="nav-link px-2 text-muted">关于</a></li>

@@ -15,7 +15,7 @@ $(document).ready(function () {
     });
     // 标题样式
     $('div.article h3, div.article h5').each(function () {
-        $(this).addClass('text-dark-emphasis border-bottom');
+        $(this).addClass('text-dark-emphasis py-1 mb-3 border-bottom');
     });
     // 图片样式
     $('div.article img').each(function () {
@@ -33,6 +33,23 @@ $(document).ready(function () {
     $('div.article table').each(function () {
         $(this).addClass('table table-light table-striped table-bordered');
     });
+    // 列表样式
+    $('div.article ul').each(function () {
+        $(this).attr('type', 'circle');
+        $(this).find('li').each(function() {
+            $(this).addClass('mb-2');
+        });
+    });
+    $('div.article ol').not('#footnotelist ol').each(function () {
+        // $(this).attr('type', 'circle');
+        $(this).find('li').each(function() {
+            $(this).addClass('mb-2');
+        });
+    });
+    // 行内代码块
+    $('div.article code').not('pre code').each(function () {
+        $(this).css('color', 'var(--bs-orange)');
+    });
     // 脚注样式
     // 依赖hexo-reference插件
     $('div.article sup').filter(function() {
@@ -45,7 +62,9 @@ $(document).ready(function () {
     });
     $('#footnotes').addClass('text-muted fw-light');
     $('a[rev="footnote"]').each(function () {
-        $(this).parent().prev().addClass('font-monospace');
+        $(this).parent().css('margin-left', '0');
+        $(this).parent().prev().css('padding-right', '8px');
+        $(this).parent().prev().addClass('font-monospace align-text-top');
         $(this).removeClass();
         $(this).addClass('link-primary link-underline-opacity-0');
         $(this).html('&nbsp;<i class="bi bi-chevron-double-up"></i>');
