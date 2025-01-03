@@ -80,7 +80,7 @@ var searchFunc = function(path, search_id, content_id) {
                         }
                         // show search results
                         if (isMatch) {
-                            str += "<li class=\"list-group-item\"><a href='" + data_url + "' class='search-result-title fs-5 link-primary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover'>" + data_title + "</a>";
+                            str += "<li class=\"list-group-item\"><a href='" + data_url + "' class='search-result-title fs-5 link-primary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover'><i class='bi bi-cursor'></i>&nbsp;" + data_title + "</a>";
                             var content = data.content.trim().replace(/<[^>]+>/g, "");
                             if (first_occur >= 0) {
                                 // cut out 100 characters
