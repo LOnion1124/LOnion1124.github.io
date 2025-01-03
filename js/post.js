@@ -41,7 +41,6 @@ $(document).ready(function () {
         });
     });
     $('div.article ol').not('#footnotelist ol').each(function () {
-        // $(this).attr('type', 'circle');
         $(this).find('li').each(function() {
             $(this).addClass('mb-2');
         });
