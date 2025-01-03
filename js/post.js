@@ -48,7 +48,7 @@ $(document).ready(function () {
     });
     // 行内代码块
     $('div.article code').not('pre code').each(function () {
-        $(this).css('color', 'var(--bs-orange)');
+        $(this).addClass('font-monospace text-dark-emphasis bg-light rounded p-1');
     });
     // 脚注样式
     // 依赖hexo-reference插件
