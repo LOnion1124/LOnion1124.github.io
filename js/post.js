@@ -23,6 +23,7 @@ $(document).ready(function () {
     });
     // 链接样式
     $('div.article a').each(function () {
+        // $(this).addClass('text-dark link link-underline-primary link-offset-3 link-underline-opacity-25 link-underline-opacity-75-hover');
         $(this).addClass('link-primary link-offset-3 link-underline-opacity-0 link-underline-opacity-75-hover');
     });
     // 引用格式
@@ -57,8 +58,9 @@ $(document).ready(function () {
         $(this).parent().prev().css('padding-right', '8px');
         $(this).parent().prev().addClass('font-monospace align-text-top');
         $(this).removeClass();
-        $(this).addClass('link-primary link-underline-opacity-0');
-        $(this).html('&nbsp;<i class="bi bi-chevron-double-up"></i>');
+        $(this).addClass('ms-1 link-primary link-underline-opacity-0 icon-link icon-link-hover');
+        $(this).css('--bs-icon-link-transform', 'translate3d(0, -.125rem, 0)');
+        $(this).html('<i class="bi bi-chevron-double-up"></i>');
     });
     // 出于某种原因，使用pandoc-renderer会导致文末脚注的某个</div>溢出，进而造成排版问题
     // 目前的解决方案是暴力注释了hexo-reference插件脚本文件的对应</div>文本语句
