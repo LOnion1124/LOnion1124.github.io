@@ -35,8 +35,20 @@ $(document).ready(function () {
         $(this).addClass('table table-light table-striped table-bordered');
     });
     // 列表样式
-    $('div.article ol, div.article ul').not('#footnotelist ol').each(function () {
+    $('div.article ol').not('#footnotelist ol').each(function () {
         $(this).addClass('list-unstyled');
+        $(this).find('li').each(function () {
+            var idx = $(this).index() + 1;
+            var content = $(this).html();
+            $(this).html('<span class="text-muted font-monospace pe-2">' + idx + '.</span><span>' + content + "</span>");
+        });
+    });
+    $('div.article ul').each(function () {
+        $(this).addClass('list-unstyled');
+        $(this).find('li').each(function () {
+            var content = $(this).html();
+            $(this).html('<span class="text-muted pe-2"><i class="bi bi-plus"></i></span><span>' + content + "</span>");
+        });
     });
     // 行内代码块
     $('div.article code').not('pre code').each(function () {
@@ -44,6 +56,7 @@ $(document).ready(function () {
     });
     // 脚注样式
     // 依赖hexo-reference插件
+    // 文内上标
     $('div.article sup').filter(function() {
         return /fnref:/.test($(this).attr('id'));
     }).each(function() {
@@ -52,15 +65,23 @@ $(document).ready(function () {
             $(this).addClass('link-primary fw-bold');
         });
     });
+    // 文末脚注
     $('#footnotes').addClass('text-muted fw-light');
-    $('a[rev="footnote"]').each(function () {
-        $(this).parent().css('margin-left', '0');
-        $(this).parent().prev().css('padding-right', '8px');
-        $(this).parent().prev().addClass('font-monospace align-text-top');
-        $(this).removeClass();
-        $(this).addClass('ms-1 link-primary link-underline-opacity-0 icon-link icon-link-hover');
-        $(this).css('--bs-icon-link-transform', 'translate3d(0, -.125rem, 0)');
-        $(this).html('<i class="bi bi-chevron-double-up"></i>');
+    $('#footnotelist ol').removeAttr('style');
+    $('#footnotelist ol').addClass('list-unstyled');
+    $('#footnotelist ol').find('li').each(function () {
+        $(this).find('span').removeAttr('style');
+        $(this).children().first().addClass('footnotelist_id pe-2 font-monospace align-text-top');
+        $(this).children().first().next().addClass('footnotelist_content');
+    });
+    $('#footnotelist span.footnotelist_content').each(function () {
+        $(this).children('a:last').each(function () {
+            $(this).removeClass();
+            $(this).removeAttr('style');
+            $(this).addClass('ms-1 link-primary link-underline-opacity-0 icon-link icon-link-hover');
+            $(this).css('--bs-icon-link-transform', 'translate3d(0, -.125rem, 0)');
+            $(this).html('<i class="bi bi-chevron-double-up"></i>');
+        });
     });
     // 出于某种原因，使用pandoc-renderer会导致文末脚注的某个</div>溢出，进而造成排版问题
     // 目前的解决方案是暴力注释了hexo-reference插件脚本文件的对应</div>文本语句
