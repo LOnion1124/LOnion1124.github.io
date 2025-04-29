@@ -35,21 +35,21 @@ $(document).ready(function () {
         $(this).addClass('table table-light table-striped table-bordered');
     });
     // 列表样式
-    $('div.article ol').not('#footnotelist ol').each(function () {
-        $(this).addClass('list-unstyled');
-        $(this).find('li').each(function () {
-            var idx = $(this).index() + 1;
-            var content = $(this).html();
-            $(this).html('<span class="text-muted font-monospace pe-2">' + idx + '.</span><span>' + content + "</span>");
-        });
-    });
-    $('div.article ul').each(function () {
-        $(this).addClass('list-unstyled');
-        $(this).find('li').each(function () {
-            var content = $(this).html();
-            $(this).html('<span class="text-muted pe-2"><i class="bi bi-plus"></i></span><span>' + content + "</span>");
-        });
-    });
+    // $('div.article ol').not('#footnotelist ol').each(function () {
+    //     $(this).addClass('list-unstyled');
+    //     $(this).find('li').each(function () {
+    //         var idx = $(this).index() + 1;
+    //         var content = $(this).html();
+    //         $(this).html('<span class="text-muted font-monospace pe-2">' + idx + '.</span><span>' + content + "</span>");
+    //     });
+    // });
+    // $('div.article ul').each(function () {
+    //     $(this).addClass('list-unstyled');
+    //     $(this).find('li').each(function () {
+    //         var content = $(this).html();
+    //         $(this).html('<span class="text-muted pe-2"><i class="bi bi-plus"></i></span><span>' + content + "</span>");
+    //     });
+    // });
     // 行内代码块
     $('div.article code').not('pre code').each(function () {
         $(this).addClass('font-monospace text-dark-emphasis bg-light rounded p-1');
