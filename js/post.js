@@ -54,6 +54,10 @@ $(document).ready(function () {
     $('div.article code').not('pre code').each(function () {
         $(this).addClass('font-monospace text-dark-emphasis bg-light rounded p-1');
     });
+    // 行内LaTeX公式
+    $('div.article span.math.inline').each(function () {
+        $(this).addClass('mx-1');
+    });
     // 脚注样式
     // 依赖hexo-reference插件
     // 文内上标
@@ -71,10 +75,11 @@ $(document).ready(function () {
     $('#footnotelist ol').addClass('list-unstyled');
     $('#footnotelist ol').find('li').each(function () {
         $(this).find('span').removeAttr('style');
-        $(this).children().first().addClass('footnotelist_id pe-2 font-monospace align-text-top');
+        $(this).children().first().addClass('footnotelist_id pe-2 font-monospace');
         $(this).children().first().next().addClass('footnotelist_content');
     });
     $('#footnotelist span.footnotelist_content').each(function () {
+        $(this).addClass('align-text-top');
         $(this).children('a:last').each(function () {
             $(this).removeClass();
             $(this).removeAttr('style');

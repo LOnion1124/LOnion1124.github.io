@@ -164,20 +164,12 @@
     
     
     <div class="text-muted fs-4 fw-light border-bottom pb-1 mb-2"><i class="bi bi-blockquote-left"></i>&nbsp;摘要</div>
-    <div class="p-2 text-muted">是雪啊！（喜</div>
+    <div class="p-2 text-muted">基本逻辑运算规则和规范，基于基本的门逻辑知识基础</div>
     
   </div>
   
 
   <!-- 目录 -->
-  
-  <div class="p-2 mb-3 border rounded shadow-sm">
-    <div class="text-center fs-4 fw-light text-muted border-bottom pb-1 mb-2"><i class="bi bi-bookmark-dash"></i>&nbsp;目录</div>
-    <div id="toc" class="px-2"></div>
-    
-<script src="/js/toc.js"></script>
-
-  </div>
   
   
   <hr>
@@ -224,7 +216,7 @@
       <div class="col col-lg-9 align-self-center">
         <div class="fs-2 mb-1 fw-bold text-truncate">
           <i class="bi bi-book-half"></i>
-          在hexo+Icarus4.x搭建的博客上添加3D飘雪效果
+          数逻学习笔记#1：布尔代数
         </div>
       </div>
 
@@ -235,8 +227,8 @@
           <i class="bi bi-folder"></i>
           
           <span class="me-1">
-            <a href="/categories/%E6%8A%80%E6%9C%AF%E6%8C%87%E5%8D%97/" class="link-secondary link-underline-opacity-0">
-              技术指南
+            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="link-secondary link-underline-opacity-0">
+              学习笔记
             </a></span>
           
           
@@ -246,7 +238,7 @@
         </p>
         <!-- 日期 -->
         <p class="mb-1 text-secondary">
-          <i class="bi bi-calendar-check"></i> 2022-08-13
+          <i class="bi bi-calendar-check"></i> 2025-03-04
         </p>
       </div>
     </div>
@@ -254,74 +246,252 @@
     <!-- 标签 -->
     <div class="py-2">
       
+      
+      <span class="me-1 badge border">
+        <a href="/tags/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1/" class="link-secondary link-underline-opacity-0">
+          <i class="bi bi-tags"></i>
+          数字逻辑设计
+        </a>
+      </span>
+      
+      <span class="me-1 badge border">
+        <a href="/tags/%E5%B8%83%E5%B0%94%E4%BB%A3%E6%95%B0/" class="link-secondary link-underline-opacity-0">
+          <i class="bi bi-tags"></i>
+          布尔代数
+        </a>
+      </span>
+      
+      
       <!-- 字数统计 -->
       <span class="me-1 badge border text-secondary">
         <i class="bi bi-text-paragraph"></i>
-        7.9k
+        6.5k
       </span>
       <!-- 阅读时长 -->
       <span class="me-1 badge border text-secondary">
         <i class="bi bi-stopwatch"></i>
-        7 min
+        5 min
       </span>
     </div>
 
     <div class="article p-4 pb-0 h-auto border rounded shadow-sm">
-      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>今天由于全站大美化升级，我便想着添加一个飘雪效果（虽然现在是夏天）。不过网上大部分的文章中提供的下雪绘制算法都较为简单粗糙，效果不甚美观，也缺乏针对icarus主题的安装方法（这个主题真是挺小众的……）。在找到一个很漂亮的飘雪算法后，看到安装指南只提供了html源码，没有半点相关知识的我本来是果断选择放弃的，但是我没有死心，连蒙带猜地试了几下之后竟然成功了！我都佩服我自己……不过这也是多亏了我之前各种瞎折腾的经历。</p>
-<p>本文就记录一下<strong>在hexo+Icarus4.x搭建的博客上添加3D飘雪效果</strong>的步骤，方便其他与我状况类似的人的使用。</p>
-<h2 id="下载资源">下载资源</h2>
-<p>请见<a
-target="_blank" rel="noopener" href="https://www.yaxi.net/2016-12-28/1211.html">这里</a>。</p>
-<p>注：资源不保证一直有效</p>
-<p>资源正常，则会得到名为snow.js的文件。</p>
-<p>此外，还会有如下代码，可以一并复制（此代码有些小问题，建议直接使用后文里提供的）：</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;http://apps.bdimg.com/libs/jquery/1.7.2/jquery.min.js&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;snow.js&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">style</span><span class="ot"> type</span><span class="op">=</span><span class="st">&quot;text/css&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">.snow-container</span>&#123;</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">position</span><span class="ch">:</span><span class="dv">fixed</span><span class="op">;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">top</span><span class="ch">:</span><span class="dv">0</span><span class="op">;</span><span class="kw">left</span><span class="ch">:</span><span class="dv">0</span><span class="op">;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">width</span><span class="ch">:</span><span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">height</span><span class="ch">:</span><span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">pointer-events</span><span class="ch">:</span><span class="dv">none</span><span class="op">;</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">z-index</span><span class="ch">:</span><span class="dv">100001</span><span class="op">;</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>&#125;</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">style</span><span class="dt">&gt;</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;snow-container&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
-<h2 id="部署代码">部署代码</h2>
-<ol type="1">
-<li><p>将“snow.js”放入“source/js/”文件夹（根路径为博客根目录+”/themes/icarus/“，下同）。</p></li>
-<li><p>在“layout/”文件夹中找到“layout.jsx”文件，在body标签内（即“&lt;/body&gt;”之前）加入如下代码：</p>
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;http://apps.bdimg.com/libs/jquery/1.7.2/jquery.min.js&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;/js/snow.js&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;snow-container&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
-<p>当然如果文件中已经引用过JQuery的，前两行可以不用加。</p></li>
-<li><p>在“source/css/”文件夹中新建一个“custom.styl”文件，在其中写入如下代码：</p>
-<div class="sourceCode" id="cb3"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.snow-container</span> &#123;</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">position</span><span class="ch">:</span> <span class="dv">fixed</span><span class="op">;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">top</span><span class="ch">:</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">left</span><span class="ch">:</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">width</span><span class="ch">:</span> <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">height</span><span class="ch">:</span> <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">pointer-events</span><span class="ch">:</span> <span class="dv">none</span><span class="op">;</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">z-index</span><span class="ch">:</span> <span class="dv">100001</span><span class="op">;</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>&#125;</span></code></pre></div>
-<p>注：关于custom.styl的更多神奇用法，可以参考<a
-target="_blank" rel="noopener" href="https://blog.mchook.cn/2021/07/22/icarus%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89/">这篇教程</a>。</p></li>
-<li><p>在“source/css/”文件夹中找到“style.styl”文件，在最后一行加入下列代码：</p>
-<div class="sourceCode" id="cb4"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">@import</span> <span class="st">&#39;./custom&#39;</span></span></code></pre></div>
-<p>其功能是引入刚刚新建的“custom.styl”。</p></li>
-<li><p>大功告成！在根目录进入git bash，使用下列代码查看效果：</p>
-<pre class="shell"><code>hexo g
-hexo s</code></pre>
-<p>正常的话就可以部署了！</p></li>
-</ol>
-<h2 id="结语">结语</h2>
-<p>博客美化毕竟是锦上添花，有人喜欢花里胡哨，有人喜欢极简。Icarus主题其实是走极简风的，不过在我的魔改下变得逐渐生动起来。但是博客到底重在内容，创作第一，美化其次。</p>
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><blockquote>
+<p><strong>布尔代数</strong>（英语：Boolean algebra）在<a
+target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/抽象代数">抽象代数</a>中是指捕获了<a
+target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/集合_(数学)">集合</a>运算和<a
+target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/逻辑">逻辑</a>运算二者的根本性质的一个<a
+target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/代数结构">代数结构</a>（就是说一组元素和服从定义的<a
+target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/公理">公理</a>的在这些元素上运算）。特别是，它处理<a
+target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/集合_(数学)">集合</a>运算<a
+target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/交集">交集</a>、<a
+target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/并集">并集</a>、<a
+target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/补集">补集</a>；和<a
+target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/逻辑">逻辑</a>运算<a
+target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/逻辑合取">与</a>、<a
+target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/逻辑析取">或</a>、<a
+target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/逻辑否定">非</a>。</p>
+</blockquote>
+<h2 id="记号">记号</h2>
+<ul>
+<li>与门：<span class="math inline">\(F(A,B)=A\times B\)</span></li>
+<li>或门：<span class="math inline">\(F(A,B)=A+B\)</span></li>
+<li>非门：<span class="math inline">\(F(A)=\bar{A}\)</span>或<span
+class="math inline">\(F(A)=A&#39;\)</span>或<span
+class="math inline">\(F(A)=\neg A\)</span></li>
+</ul>
+<h2 id="运算规则">运算规则</h2>
+<h3 id="律">01律</h3>
+<p><span class="math display">\[
+\bar{0}=1
+\]</span></p>
+<p><span class="math display">\[
+\bar{1}=0
+\]</span></p>
+<p><span class="math display">\[
+0\times A=0
+\]</span></p>
+<p><span class="math display">\[
+0+A=A
+\]</span></p>
+<p><span class="math display">\[
+1\times A=A
+\]</span></p>
+<p><span class="math display">\[
+1+A=1
+\]</span></p>
+<h3 id="重复律">重复律</h3>
+<p><span class="math display">\[
+A\times A=A
+\]</span></p>
+<p><span class="math display">\[
+A+A=A
+\]</span></p>
+<h3 id="互补律">互补律</h3>
+<p><span class="math display">\[
+A\times \bar{A}=0
+\]</span></p>
+<p><span class="math display">\[
+A+\bar{A}=1
+\]</span></p>
+<p>以上的恒等式常常用于化简代数式，即补入常数，进而因式分解或做其他操作。</p>
+<h3 id="交换律">交换律</h3>
+<p><span class="math display">\[
+A+B=B+A
+\]</span></p>
+<p><span class="math display">\[
+A\times B = B\times A
+\]</span></p>
+<h3 id="结合律">结合律</h3>
+<p><span class="math display">\[
+(A\times B)\times C=A\times (B\times C)
+\]</span></p>
+<p><span class="math display">\[
+(A+B)+C=A+(B+C)
+\]</span></p>
+<h3 id="分配律">分配律</h3>
+<p><span class="math display">\[
+A\times (B+C)=A\times B + A\times C
+\]</span></p>
+<p><span class="math display">\[
+A+B\times C=(A+B)\times (A+C)
+\]</span></p>
+<p>注意第二条等式（加对乘的分配律），证明考虑逆向推导。这个性质可用于化为POM标准型的场合（见下文）。</p>
+<p><strong>以上等式是显然的，使用真值表即可直观证明。证明过程略去。</strong></p>
+<h3 id="吸收律">吸收律</h3>
+<p><span class="math display">\[
+A+A\times B=A
+\]</span></p>
+<p><span class="math display">\[
+A\times(A+B)=A
+\]</span></p>
+<p>证明第一式： <span class="math display">\[
+A+A\times B=A\times 1+ A\times B=A\times(1+B)=A\times 1=A
+\]</span> 利用对偶性质即可得到第二式（见下文）。</p>
+<h3 id="化简律">化简律</h3>
+<p><span class="math display">\[
+A+\bar{A}\times B=A+B
+\]</span></p>
+<p><span class="math display">\[
+A\times (\bar{A}+B)=A\times B
+\]</span></p>
+<p>证明第一式： <span class="math display">\[
+A+\bar{A}\times B=(A+\bar{A})\times(A+B)=1\times (A+B)=A+B
+\]</span> 同样利用对偶性质得到第二式。</p>
+<h3 id="归一律">归一律</h3>
+<p><span class="math display">\[
+A\times B + \bar{A}\times C+B\times C=A\times B+\bar{A}\times C
+\]</span></p>
+<p><span class="math display">\[
+(A+B)\times (\bar{A}+C)\times (B+C)=(A+B)\times (\bar{A}+C)
+\]</span></p>
+<p>证明第一式： <span class="math display">\[
+A\times B + \bar{A}\times C+B\times C=A\times B\times
+(C+\bar{C})+\bar{A}\times (B+\bar{B})\times C+(A+\bar{A})\times B\times
+C=A\times B\times C+A\times B\times \bar{C}+\bar{A}\times B\times
+C+\bar{A}\times \bar{B}\times C=A\times B+\bar{A}\times B
+\]</span> 利用对偶得到第二式。</p>
+<h3 id="德摩根定律de-morgans-law">德摩根定律（De Morgan's Law）</h3>
+<p><span class="math display">\[
+\overline{A+B}=\bar{A}\times \bar{B}
+\]</span></p>
+<p><span class="math display">\[
+\overline{A\times B}=\bar{A}+\bar{B}
+\]</span></p>
+<p>可用真值表证明。</p>
+<blockquote>
+<p>Break the line, change the line.</p>
+</blockquote>
+<h2 id="运算性质">运算性质</h2>
+<h3 id="换元性质substitution-theorem">换元性质（Substitution
+Theorem）</h3>
+<p>布尔代数遵循一般的换元规则。</p>
+<h3 id="对偶性质duality-theorem">对偶性质（Duality Theorem）</h3>
+<blockquote>
+<p>如果一个等式成立，那它的对偶亦成立</p>
+</blockquote>
+<p>对偶：保持运算顺序，变量不变，与或互换，01互换。</p>
+<p>前文各性质的两个等式都互为对偶。</p>
+<h3 id="互补性质complementary-theorem">互补性质（Complementary
+Theorem）</h3>
+<p>用于求反函数（指布尔输出相反的函数）。</p>
+<p>互补：保持运算顺序，变量<strong>取反</strong>，与或互换，01互换。</p>
+<p>事实上，直接用德摩根定律更直观。</p>
+<h2 id="规范型canonical-form">规范型（Canonical Form）</h2>
+<p>对应于同样真值表的布尔表达式可能有很多种形式，这使得化简变得很有需要。为了更好地完成这份工作，规定了两种布尔表达式的<strong>规范型</strong>。</p>
+<h3 id="最小项之和som">最小项之和（SOM）</h3>
+<blockquote>
+<p>SOM: Sum-of-Minterm</p>
+</blockquote>
+<p>最小项：当且仅当变量取某一值时为1，其余皆为0。</p>
+<p>换句话说，就是把使输出为1的每一种变量情况<em>或</em>起来。</p>
+<p><strong>记号：</strong>当变量输入的十进制表示为<span
+class="math inline">\(i\)</span>时，对应的最小项记为<span
+class="math inline">\(m_i\)</span>。</p>
+<blockquote>
+<p>输入的十进制表示：例如变量排序为A, B, C，输入情况为A=1, B=1,
+C=0，则十进制表示为(110)=6。</p>
+</blockquote>
+<h3 id="最大项之积pom">最大项之积（POM）</h3>
+<blockquote>
+<p>POM: Product-of-Maxterm</p>
+</blockquote>
+<p>最大项：当且仅当变量取某一值时为0，其余皆为1。</p>
+<p>可以这样理解：所有最大项<em>与</em>起来，代表的变量情况就是使输出为1的那些。</p>
+<p><strong>记号：</strong>当变量输入的十进制表示为<span
+class="math inline">\(i\)</span>时，对应的最小项记为<span
+class="math inline">\(M_i\)</span>。</p>
+<h3 id="记法">记法</h3>
+<p><span class="math display">\[
+F=m_{k_1}+m_{k_2}+\dots +m_{k_n}=\Sigma_{m}(k_1,k_2,\dots,k_n)
+\]</span></p>
+<p><span class="math display">\[
+F=M_{k_1}\times M_{k_2}\times \dots \times
+M_{k_n}=\Pi_{M}(k_1,k_2,\dots,k_n)
+\]</span></p>
+<p>例如，以下真值表：</p>
+<table>
+<thead>
+<tr>
+<th>X</th>
+<th>Y</th>
+<th>F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>有： <span class="math display">\[
+F=\bar{X}\times\bar{Y}+X\times\bar{Y}=m_0+m_2=\Sigma_m(0,2)
+\]</span></p>
+<p><span class="math display">\[
+F=(X+\bar{Y})\times(\bar{X}+\bar{Y})=M_1\times M_3=\Pi_M(1,3)
+\]</span></p>
+<h3 id="som与pom的转化">SOM与POM的转化</h3>
+<p>变量输入最小项取值与最大项取值互为补集。</p>
+<p>例如，<span class="math inline">\(\Sigma_m(0, 1, 3, 5)=\Pi_M(2, 4, 6,
+7)\)</span>。</p>
+<h2 id="标准型standard-form">标准型（Standard Form）</h2>
+<p>得到规范型后进一步化简得到规范型。注意：规范型必须是<strong>和的积（POS）</strong>或者<strong>积的和（SOP）</strong>的形式。也就是说，电路图只有两层。</p>
 
     </div>
 
@@ -331,27 +501,15 @@ hexo s</code></pre>
       <div class="row">
         <div class="col-1 pe-0">
           
-          <div class="text-end">
-            <a href="/posts/36856836d52b/" class="fs-5 link-secondary link-underline-opacity-0">
-              <button type="button" class="btn btn-sm"><i class="bi bi-chevron-double-left"></i></button>
-            </a>
-          </div>
-          
         </div>
         <div class="col-5 ps-0 border-end border-2">
-          
-          <div class="text-start">
-            <a href="/posts/36856836d52b/" class="fs-5 fw-light link-secondary link-underline-opacity-0">
-              <div class="text-truncate">Markdown渲染示例</div>
-            </a>
-          </div>
           
         </div>
         <div class="col-5 pe-0 border-start border-2">
           
           <div class="text-end">
-            <a href="/posts/d9e0a0273050/" class="fs-5 fw-light link-secondary link-underline-opacity-0">
-              <div class="text-truncate">关于换电脑之后的博客部署</div>
+            <a href="/posts/2a187cbf082d/" class="fs-5 fw-light link-secondary link-underline-opacity-0">
+              <div class="text-truncate">Onion主题开发</div>
             </a>
           </div>
           
@@ -359,7 +517,7 @@ hexo s</code></pre>
         <div class="col-1 ps-0">
           
           <div class="text-start">
-            <a href="/posts/d9e0a0273050/" class="fs-5 link-secondary link-underline-opacity-0">
+            <a href="/posts/2a187cbf082d/" class="fs-5 link-secondary link-underline-opacity-0">
               <button type="button" class="btn btn-sm"><i class="bi bi-chevron-double-right"></i></button>
             </a>
           </div>
