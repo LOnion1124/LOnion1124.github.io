@@ -70,6 +70,8 @@
     }
   </style>
 
+  <!-- busuanzi -->
+  <script src="//api.busuanzi.cc/static/3.6.9/busuanzi.min.js" defer></script>
 <meta name="generator" content="Hexo 7.3.0"></head>
 
 <body class="withfont">
@@ -153,8 +155,9 @@
   <div class="col-md-3 offset-md-1 d-none d-md-block">
     <div class="position-sticky" style="top: 2rem;">
 
-  <!-- 头像框 -->
+  <!-- 首页 / 非文章页 -->
   
+  <!-- 头像框 -->
   <div class="p-4 mb-3 bg-light rounded text-center shadow-sm">
     <div class="p-2">
       <img src="/img/avatar.png" class="rounded-circle img-fluid nofancybox" alt="" width="128">
@@ -165,6 +168,20 @@
       更多信息
       <i class="bi bi-chevron-double-right"></i>
     </button>
+  </div>
+  <!-- 访问统计 -->
+  <div class="p-4 mb-3 bg-light rounded text-center shadow-sm">
+    <div class="text-muted">
+      <div class="d-flex justify-content-between align-items-center">
+        <span><i class="bi bi-graph-up"></i> 总访问量</span>
+        <span id="busuanzi_site_pv" class="badge bg-primary rounded-pill">...</span>
+      </div>
+      <hr>
+      <div class="d-flex justify-content-between align-items-center">
+        <span><i class="bi bi-graph-up-arrow"></i> 今日访问量</span>
+        <span id="busuanzi_today_site_pv" class="badge bg-primary rounded-pill">...</span>
+      </div>
+    </div>
   </div>
   
 
@@ -196,7 +213,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p class="mb-0">我的邮箱：L_Onion@qq.com</p>
+        <p class="mb-0">浙江大学计算机系本科在读。邮箱：luyizhi1124@zju.edu.cn</p>
       </div>
     </div>
   </div>

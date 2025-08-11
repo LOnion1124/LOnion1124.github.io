@@ -70,6 +70,8 @@
     }
   </style>
 
+  <!-- busuanzi -->
+  <script src="//api.busuanzi.cc/static/3.6.9/busuanzi.min.js" defer></script>
 <meta name="generator" content="Hexo 7.3.0"></head>
 
 <body class="withfont">
@@ -153,7 +155,7 @@
   <div class="col-md-3 offset-md-1 d-none d-md-block">
     <div class="position-sticky" style="top: 2rem;">
 
-  <!-- 头像框 -->
+  <!-- 首页 / 非文章页 -->
   
 
   <!-- 文章页 -->
@@ -206,7 +208,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p class="mb-0">我的邮箱：L_Onion@qq.com</p>
+        <p class="mb-0">浙江大学计算机系本科在读。邮箱：luyizhi1124@zju.edu.cn</p>
       </div>
     </div>
   </div>
@@ -224,7 +226,7 @@
       <div class="col col-lg-9 align-self-center">
         <div class="fs-2 mb-1 fw-bold text-truncate">
           <i class="bi bi-book-half"></i>
-          SICP知识点拾遗（更新中）
+          SICP知识点拾遗
         </div>
       </div>
 
@@ -273,12 +275,17 @@
       <!-- 字数统计 -->
       <span class="me-1 badge border text-secondary">
         <i class="bi bi-text-paragraph"></i>
-        59k
+        60k
       </span>
       <!-- 阅读时长 -->
       <span class="me-1 badge border text-secondary">
         <i class="bi bi-stopwatch"></i>
-        49 min
+        50 min
+      </span>
+      <!-- 访问统计-->
+       <span class="me-1 badge border text-secondary">
+        <i class="bi bi-fire"></i>
+        <span id="busuanzi_today_page_pv">...</span> / <span id="busuanzi_page_pv">...</span>
       </span>
     </div>
 
@@ -287,7 +294,10 @@
 target="_blank" rel="noopener" href="https://csdiy.wiki/">CS自学指南</a>的首页就提到过这门传奇的编程入门课程——SICP。在该网页内提供的版本是加州伯克利大学的线上学习资源。</p>
 <p>这门课程并不将重点放在某一个具体的编程语言上，而是更多关注<strong>编写程序本身</strong>的通用范式，从通用计算机处理语言的逻辑入手，帮助初学者快速上手，开启编程之旅。</p>
 <p>笔者在新加坡国立大学举办的暑校中全程参与了SICP课程，NUS版本的SICP基于该校学生自主构建的JavaScript实验平台<a
-target="_blank" rel="noopener" href="https://sourceacademy.org/playground">SourceAcademy</a>，使用JS的子语言Source（由开发者创立），良好的前端性质赋予了这门课程更人性化的程序交互功能（比如逐步实现程序）。</p>
+target="_blank" rel="noopener" href="https://sourceacademy.org/playground">SourceAcademy</a>，使用JS的子语言Source（由开发者创立），良好的前端性质赋予了这门课程更人性化的程序交互功能（比如逐步实现程序）。这里顺便贴出笔者完成的课程设计：一个2048小游戏的化学同位素版本，在<a
+target="_blank" rel="noopener" href="https://share.sourceacademy.org/91e5d">此处</a>可以直接体验（点击左上角Run按钮，在右侧切换到游戏窗口视图（第四个））。代码在上述链接和<a
+target="_blank" rel="noopener" href="https://github.com/LOnion1124/SICP-Project-Isotopic256pro">Github仓库</a>都可以查看。这个游戏的灵感来源于<a
+target="_blank" rel="noopener" href="https://github.com/JamesDonnelly/Isotopic256">Isotopic256</a>。</p>
 <p>对于至少接触过一个学期的CS专业课的同学而言，这门课程应该确实是略显基础了，极大部分内容，哪怕学校课程并没有明确指出，在实际编程的过程中也应该自主体会过了（比如内存模型和变量生存周期之类）。</p>
 <p>基于以上原因，我利用参与这门课程的无聊时间整理了一些值得记忆或了解的知识点，供已经有一些编程基础，但是又对这门课程感兴趣的同学们快速补全。</p>
 <h2 id="recursion递归的进一步探讨">Recursion：递归的进一步探讨</h2>
@@ -955,6 +965,8 @@ class="sourceCode js"><code class="sourceCode javascript"><span id="cb22-1"><a h
 <span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> melody <span class="op">=</span> <span class="fu">make_melody</span>(<span class="fu">list</span>(c1<span class="op">,</span> c2<span class="op">,</span> c3<span class="op">,</span> c4<span class="op">,</span> c5<span class="op">,</span> c6<span class="op">,</span> c7)<span class="op">,</span> <span class="fu">list</span>(<span class="dv">1</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">2</span>))<span class="op">;</span></span>
 <span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="fu">play</span>(melody)<span class="op">;</span></span></code></pre></div>
+<h2 id="arcade_2d2d游戏引擎">Arcade_2d：2D游戏引擎</h2>
+<p>一个简陋的2D游戏引擎。简陋是指这个引擎只实现了一些最基本的功能，其他的比如物理模拟全部需要自己写。</p>
 
     </div>
 
