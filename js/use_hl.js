@@ -24,7 +24,7 @@ $(document).ready(function () {
             language = curLanguage;
         }
 
-        $(this).addClass('codeSnippet rounded bg-light');
+        $(this).addClass('codeSnippet rounded bg-light-subtle');
         $(this).wrap('<div class="p-1 border rounded"></div>')
         $(this).before('<div class="mb-1 d-none d-md-flex align-items-center"><small class="ms-2 font-monospace text-muted text-uppercase">' + language + '</small><div class="d-flex ms-auto"><button type="button" class="btn btn-sm btn-link copyButton"><i class="bi bi-clipboard"></i></button></div>');
     });

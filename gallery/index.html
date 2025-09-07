@@ -8,6 +8,19 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Initial Light / Dark Theme Toggle -->
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('bs-theme');
+        if (!theme) {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-bs-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+
   <!-- favicon -->
   <link rel="icon" href="/img/favicon.ico">
 
@@ -24,7 +37,8 @@
 
 
   <!-- 代码高亮 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/styles/base16/papercolor-light.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/styles/panda-syntax-light.css" id="highlight-css-light" disabled>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/styles/panda-syntax-dark.css" id="highlight-css-dark" disabled>
   <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
   
 <script src="/js/use_hl.js"></script>
@@ -32,7 +46,7 @@
 
   <!-- Bootstrap5 图标库 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  
+
   <!-- fancybox -->
   
 <script src="/js/fancybox.js"></script>
@@ -55,13 +69,13 @@
     var path = "/" + search_path;
     searchFunc(path, 'local-search-input', 'local-search-result');
   </script>
-  
+
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap" rel="stylesheet">
-  
-  <style>   
+
+  <style>
     .withfont {
       font-family: "Noto Serif SC", serif;
       /* font-optical-sizing: auto; */
@@ -72,11 +86,20 @@
 
   <!-- busuanzi -->
   <script src="//api.busuanzi.cc/static/3.6.9/busuanzi.min.js" defer></script>
+
+  <!-- Pagination -->
+  
+<script src="/js/pagination.js"></script>
+
+
+  
+<script src="/js/theme.js"></script>
+
 <meta name="generator" content="Hexo 7.3.0"></head>
 
-<body class="withfont">
-  <div class="d-flex flex-column min-vh-100">
-    <div><nav class="py-2 border-bottom bg-light">
+<body class='withfont'>
+  <div class="flex-column min-vh-100">
+    <div><nav class="py-2 border-bottom bg-light-subtle">
   <div class="container d-flex flex-wrap">
     <ul class="nav me-auto">
       <!-- Home -->
@@ -112,24 +135,31 @@
       
     </ul>
     <ul class="nav">
-      <li class="nav-item"><a href="#" data-bs-toggle="modal" data-bs-target="#infoModal" class="nav-link link-dark px-2"><i class="bi bi-envelope-at"></i></a></li>
-      <li class="nav-item"><a target="_blank" rel="noopener" href="https://github.com/LOnion1124" class="nav-link link-dark px-2"><i class="bi bi-github"></i></a></li>
+      <li class="nav-item"><a href="#" data-bs-toggle="modal" data-bs-target="#infoModal" class="theme-link nav-link link-dark px-2"><i class="bi bi-envelope-at"></i></a></li>
+      <li class="nav-item"><a target="_blank" rel="noopener" href="https://github.com/LOnion1124" class="theme-link nav-link link-dark px-2"><i class="bi bi-github"></i></a></li>
     </ul>
   </div>
 </nav>
 
 <header class="py-3 mb-4 border-bottom shadow-sm">
   <div class="container d-flex flex-wrap justify-content-center">
-    <a href="/" class="d-flex align-items-center mb-0 me-auto text-dark text-decoration-none">
-      <span class="bi mx-3" width="40" height="32"><img src="/img/logo.png" alt="" height="32" class="nofancybox"></span>
-      <span class="mx-3 fs-4 fw-light d-none d-md-block">这里是洋葱菌的博客</span>
-    </a>
-    
-    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#searchModal">
-      <i class="bi bi-search"></i>
-      搜索
-    </button>
-    <div class="modal fade" id="searchModal">
+    <span class="d-flex mb-0 me-auto">
+      <a href="/" class="text-dark text-decoration-none">
+        <span id="logo-light" class="bi mx-3" width="40" height="32"><img src="/img/logo_light.png" alt="" height="32" class="nofancybox"></span>
+        <span id="logo-dark" class="bi mx-3" width="40" height="32"><img src="/img/logo_dark.png" alt="" height="32" class="nofancybox"></span>
+        <!-- <span class="mx-3 fs-4 fw-light d-none d-md-block"></span> -->
+      </a>
+    </span>
+    <span>
+      <button type="button" class="btn btn-outline-primary" id="theme-toggle-button">
+        <i id="theme-toggle-icon" class="bi bi-sun"></i>
+      </button>
+      
+      <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#searchModal">
+        <i class="bi bi-search"></i>
+        搜索
+      </button>
+      <div class="modal fade" id="searchModal">
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -144,21 +174,22 @@
     </div>
   </div>
 </div>
-    
+      
+    </span>
   </div>
 </header></div>
 
     
 
-    <div class="px-2 px-md-0">
+    <div class="px-2 px-md-0 container">
       <div class="row">
-  <div class="col-md-3 offset-md-1 d-none d-md-block">
+  <!-- 左边栏 -->
+  <div class="col-lg-4 d-none d-lg-block">
     <div class="position-sticky" style="top: 2rem;">
-
   <!-- 首页 / 非文章页 -->
   
   <!-- 头像框 -->
-  <div class="p-4 mb-3 bg-light rounded text-center shadow-sm">
+  <div class="p-4 mb-3 bg-light-subtle rounded text-center shadow-sm">
     <div class="p-2">
       <img src="/img/avatar.png" class="rounded-circle img-fluid nofancybox" alt="" width="128">
     </div>
@@ -170,7 +201,7 @@
     </button>
   </div>
   <!-- 访问统计 -->
-  <div class="p-4 mb-3 bg-light rounded text-center shadow-sm">
+  <div class="p-4 mb-3 bg-light-subtle rounded text-center shadow-sm">
     <div class="text-muted d-flex flex-column flex-xxl-row justify-content-between align-items-center">
       <!-- 访问量 -->
       <span>
@@ -240,7 +271,7 @@
 
   </div>
 
-  <div class="col-md-7">
+  <div class="col-12 col-lg-8">
     <div class="article p-4 pb-0 h-auto border rounded shadow-sm">
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="陈列室">陈列室</h2>
 <p>正在建设中……</p>
@@ -250,7 +281,7 @@
 </div>
     </div>
 
-    <div class="mt-auto"><footer class="row py-3 mt-4 border-top bg-light">
+    <div class="mt-auto"><footer class="row py-3 mt-4 border-top bg-light-subtle">
   <ul class="nav col-md-6 justify-content-center">
     <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><i class="bi bi-c-circle"></i>&nbsp;2024~2025 L_Onion. All rights reserved.</a></li>
   </ul>

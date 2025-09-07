@@ -24,8 +24,8 @@ $(document).ready(function() {
             // 检查该标题是否在视口内
             if (scrollPosition >= offsetTop - 10 && scrollPosition < offsetTop + heading.outerHeight()) {
                 // 高亮对应的目录项
-                $('#toc a').removeClass('list-group-item-primary');
-                $(`#toc a[href="#${id}"]`).addClass('list-group-item-primary');
+                $('#toc a').removeClass('active');
+                $(`#toc a[href="#${id}"]`).addClass('active');
             }
         });
     });

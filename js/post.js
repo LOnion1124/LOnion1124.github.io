@@ -24,7 +24,7 @@ $(document).ready(function () {
     // 链接样式
     $('div.article a').each(function () {
         // $(this).addClass('text-dark link link-underline-primary link-offset-3 link-underline-opacity-25 link-underline-opacity-75-hover');
-        $(this).addClass('link-primary link-offset-3 link-underline-opacity-0 link-underline-opacity-75-hover');
+        $(this).addClass('link-offset-3 link-underline link-underline-opacity-0 link-underline-opacity-50-hover');
     });
     // 引用格式
     $('div.article blockquote').each(function () {
@@ -32,7 +32,7 @@ $(document).ready(function () {
     });
     // 表格样式
     $('div.article table').each(function () {
-        $(this).addClass('table table-light table-striped table-bordered');
+        $(this).addClass('table table-light-subtle table-striped table-bordered');
     });
     // 列表样式
     // $('div.article ol').not('#footnotelist ol').each(function () {
@@ -52,7 +52,7 @@ $(document).ready(function () {
     // });
     // 行内代码块
     $('div.article code').not('pre code').each(function () {
-        $(this).addClass('font-monospace text-dark-emphasis bg-light rounded p-1');
+        $(this).addClass('font-monospace text-dark-emphasis bg-light-subtle rounded p-1');
     });
     // 行内LaTeX公式
     $('div.article span.math.inline').each(function () {
