@@ -23,7 +23,6 @@ $(document).ready(function () {
     });
     // 链接样式
     $('div.article a').each(function () {
-        // $(this).addClass('text-dark link link-underline-primary link-offset-3 link-underline-opacity-25 link-underline-opacity-75-hover');
         $(this).addClass('link-offset-3 link-underline link-underline-opacity-0 link-underline-opacity-50-hover');
     });
     // 引用格式
@@ -32,6 +31,7 @@ $(document).ready(function () {
     });
     // 表格样式
     $('div.article table').each(function () {
+        $(this).wrap('<div class="table-responsive"></div>');
         $(this).addClass('table table-light-subtle table-striped table-bordered');
     });
     // 列表样式
@@ -47,16 +47,25 @@ $(document).ready(function () {
     //     $(this).addClass('list-unstyled');
     //     $(this).find('li').each(function () {
     //         var content = $(this).html();
-    //         $(this).html('<span class="text-muted pe-2"><i class="bi bi-plus"></i></span><span>' + content + "</span>");
+    //         $(this).html('<span class="text-muted pe-2"><i class="bi bi-record"></i></span><span>' + content + "</span>");
     //     });
     // });
     // 行内代码块
     $('div.article code').not('pre code').each(function () {
-        $(this).addClass('font-monospace text-dark-emphasis bg-light-subtle rounded p-1');
+        $(this).addClass('font-monospace text-warning-emphasis bg-warning-subtle rounded p-1');
     });
     // 行内LaTeX公式
     $('div.article span.math.inline').each(function () {
         $(this).addClass('mx-1');
+    });
+    // 行间LaTeX公式
+    $('div.article span.math.display').each(function () {
+        $(this).wrap('<div class="table-responsive" style="overflow-x:auto;"></div>');
+        $(this).parent().css({
+            'display': 'block',
+            'width': '100%',
+            'overflowX': 'auto'
+        });
     });
     // 脚注样式
     // 依赖hexo-reference插件

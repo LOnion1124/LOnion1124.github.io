@@ -1,27 +1,28 @@
-(function($) { 
-	// When to show the scroll link
-	// higher number = scroll link appears further down the page   
-	var upperLimit = 1000;
-	
-	// Our scroll link element
+// 回到顶部按钮逻辑：默认隐藏，用户上划时出现，下滑时隐藏
+(function($) {
 	var scrollElem = $('#totop');
-   
-	// Scroll to top speed
 	var scrollSpeed = 150;
-   
-	// Show and hide the scroll to top link based on scroll position   
+	var lastScrollTop = $(window).scrollTop();
+	var minShowScroll = 100; // 滚动超过多少像素后才允许显示按钮
+
 	scrollElem.hide();
-	$(window).scroll(function () {
-		var scrollTop = $(document).scrollTop();       
-		if ( scrollTop > upperLimit ) {
-			$(scrollElem).stop().fadeTo(300, 1); // fade back in           
-		}else{
-			$(scrollElem).stop().fadeTo(300, 0); // fade out
+
+	$(window).on('scroll', function() {
+		var scrollTop = $(window).scrollTop();
+		if (scrollTop < minShowScroll) {
+			scrollElem.stop().fadeTo(200, 0); // 顶部区域始终隐藏
+		} else if (scrollTop < lastScrollTop) {
+			// 上划，显示按钮
+			scrollElem.stop().fadeTo(200, 1);
+		} else if (scrollTop > lastScrollTop) {
+			// 下滑，隐藏按钮
+			scrollElem.stop().fadeTo(200, 0);
 		}
+		lastScrollTop = scrollTop;
 	});
 
-	// Scroll to top animation on click
-	$(scrollElem).click(function(){
-		$('html, body').animate({scrollTop:0}, scrollSpeed); return false;
+	scrollElem.click(function() {
+		$('html, body').animate({scrollTop:0}, scrollSpeed);
+		return false;
 	});
 })(jQuery);
