@@ -36,10 +36,17 @@ $(document).ready(function () {
         var codeContent = $(this).parent().parent().next('.codeSnippet').text();
         navigator.clipboard.writeText(codeContent)
             .then(function () {
-                alert('代码已复制到剪贴板！');
+                var btn = (document.activeElement && document.activeElement.classList && document.activeElement.classList.contains('copyButton'))
+                    ? document.activeElement
+                    : document.querySelector('.copyButton:focus') || document.querySelector('.copyButton');
+                if (btn) {
+                    var pop = new bootstrap.Popover(btn, { content: 'Copied!', trigger: 'manual', placement: 'top' });
+                    pop.show();
+                    setTimeout(function () { pop.hide(); pop.dispose(); }, 1500);
+                }
             })
             .catch(function (err) {
-                console.error('复制失败:', err);
+                console.error('Copy failed: ', err);
             });
     });
 });
