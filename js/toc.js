@@ -1,14 +1,14 @@
 $(document).ready(function() {
     const toc = $('<div class="list-group list-group-flush"></div>');
 
-    $('div.article h3').each(function() {
+    $('div.article h2').each(function() {
         const heading = $(this);
         const headingId = heading.attr('id') || heading.text().replace(/\s+/g, '-');
         heading.attr('id', headingId); // 确保每个标题都有 ID
 
         // const listItem = $('<li class="list-group-item list-group-item-action"></li>');
         // listItem.append(`<a href="#${headingId}" class="stretched-link"><div class="text-truncate">${heading.text()}</div></a>`);
-        const listItem = $(`<a href="#${headingId}" class="list-group-item list-group-item-action"><div class="text-truncate">${heading.text()}</div></a>`);
+        const listItem = $(`<a href="#${headingId}" class="list-group-item list-group-item-action"><div class="text-truncate toc-item">${heading.text()}</div></a>`);
         toc.append(listItem);
     });
 
@@ -16,7 +16,7 @@ $(document).ready(function() {
 
     $(window).on('scroll', function() {
         let scrollPosition = $(window).scrollTop();
-        $('h3').each(function() {
+        $('h2').each(function() {
             const heading = $(this);
             const offsetTop = heading.offset().top;
             const id = heading.attr('id');

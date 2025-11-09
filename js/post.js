@@ -1,21 +1,36 @@
 // 为post页面元素添加bs5类标签
 
 $(document).ready(function () {
-    // 将文档中的三四五级标题替换为五级标题
-    $('div.article h3, div.article h4, div.article h5').each(function () {
-        var content = $(this).html();
-        var newElement = $('<h5></h5>').html(content);
-        $(this).replaceWith(newElement);
-    });
-    // 将文档中的一二级标题替换为三级标题
-    $('div.article h1, div.article h2').each(function () {
-        var content = $(this).html();
-        var newElement = $('<h3></h3>').html(content);
-        $(this).replaceWith(newElement);
-    });
+    // // 将文档中的三四五级标题替换为五级标题
+    // $('div.article h3, div.article h4, div.article h5').each(function () {
+    //     var content = $(this).html();
+    //     var newElement = $('<h5></h5>').html(content);
+    //     $(this).replaceWith(newElement);
+    // });
+    // // 将文档中的一二级标题替换为三级标题
+    // $('div.article h1, div.article h2').each(function () {
+    //     var content = $(this).html();
+    //     var newElement = $('<h3></h3>').html(content);
+    //     $(this).replaceWith(newElement);
+    // });
     // 标题样式
-    $('div.article h3, div.article h5').each(function () {
-        $(this).addClass('text-dark-emphasis py-1 mb-3 border-bottom');
+    $('div.article h1').each(function () {
+        $(this).addClass('text-dark-emphasis py-1 mb-3 border-bottom h2 fw-bold border-3');
+    });
+    $('div.article h2').each(function () {
+        $(this).addClass('text-dark-emphasis py-1 mb-3 border-bottom h3 fw-bold');
+    });
+    $('div.article h3').each(function () {
+        $(this).addClass('fw-bold py-1 mb-3 h4');
+    });
+    $('div.article h4').each(function () {
+        $(this).addClass('fw-bold py-1 mb-3 h5');
+    });
+    $('div.article h5').each(function () {
+        $(this).addClass('fw-bold h6');
+    });
+    $('div.article h6').each(function () {
+        $(this).addClass('fw-bold text-muted');
     });
     // 图片样式
     $('div.article img').each(function () {
@@ -23,7 +38,7 @@ $(document).ready(function () {
     });
     // 链接样式
     $('div.article a').each(function () {
-        $(this).addClass('link-offset-3 link-underline link-underline-opacity-0 link-underline-opacity-50-hover');
+        $(this).addClass('link-offset-2 link-underline link-underline-opacity-0 link-underline-opacity-50-hover');
     });
     // 引用格式
     $('div.article blockquote').each(function () {
@@ -63,8 +78,7 @@ $(document).ready(function () {
         $(this).wrap('<div class="table-responsive" style="overflow-x:auto;"></div>');
         $(this).parent().css({
             'display': 'block',
-            'width': '100%',
-            'overflowX': 'auto'
+            'width': '100%'
         });
     });
     // 脚注样式

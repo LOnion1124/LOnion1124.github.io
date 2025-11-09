@@ -1,0 +1,38 @@
+#waifu {
+	/* bottom: -500px;
+	right: 0; */
+	/* position: fixed; */
+	/* transform: translateY(25px);
+	transition: transform .3s ease-in-out, bottom 3s ease-in-out; */
+	z-index: 1;
+}
+
+/* #waifu.waifu-active {
+	bottom: 0;
+	right: 0;
+} */
+
+#waifu.waifu-hidden {
+	display: none;
+}
+
+#waifu-tips {
+	/* height: 50px; */
+	width: 180px;
+	position: fixed;
+	bottom: 180px;
+	right: 10px;
+}
+
+#live2d {
+	cursor: grab;
+	height: 200px;
+	width: 200px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+#live2d:active {
+	cursor: grabbing;
+}

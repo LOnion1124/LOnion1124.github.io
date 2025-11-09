@@ -100,6 +100,13 @@
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6" crossorigin="anonymous"></script>
   <!-- To automatically render math in text elements, include the auto-render extension: -->
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+  <!-- live2d -->
+  <!-- <script src="https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0-rc.7/dist/autoload.js"></script> -->
+  <!-- <script src="https://raw.githack.com/LOnion1124/live2d-widget/refs/heads/master/dist/autoload.js"></script> -->
+  
+<script src="/live2d/dist/autoload.js"></script>
+
 <meta name="generator" content="Hexo 7.3.0"></head>
 
 <body class='withfont'>
@@ -108,14 +115,14 @@
   <div class="container d-flex flex-wrap">
     <ul class="nav me-auto">
       <!-- Home -->
-      <li class="nav-item px-2">
+      <li class="nav-item px-2 menu-item-home">
         
         <a class="nav-link link-body-emphasis" href="/">主页</a>
         
       </li>
 
       <!-- Archive -->
-      <li class="nav-item px-2">
+      <li class="nav-item px-2 menu-item-archives">
         
         <a class="nav-link link-secondary" href="/archives">归档</a>
         
@@ -123,7 +130,7 @@
 
       <!-- Gallery -->
       
-      <li class="nav-item px-2">
+      <li class="nav-item px-2 menu-item-gallery">
         
         <a class="nav-link link-body-emphasis" href="/gallery">陈列</a>
         
@@ -132,7 +139,7 @@
 
       <!-- About -->
       
-      <li class="nav-item px-2">
+      <li class="nav-item px-2 menu-item-about">
         
         <a class="nav-link link-body-emphasis" href="/about">关于</a>
         
@@ -140,8 +147,8 @@
       
     </ul>
     <ul class="nav">
-      <li class="nav-item"><a href="#" data-bs-toggle="modal" data-bs-target="#infoModal" class="theme-link nav-link link-dark px-2"><i class="bi bi-envelope-at"></i></a></li>
-      <li class="nav-item"><a target="_blank" rel="noopener" href="https://github.com/LOnion1124" class="theme-link nav-link link-dark px-2"><i class="bi bi-github"></i></a></li>
+      <li class="nav-item nav-item-mailbox"><a href="#" data-bs-toggle="modal" data-bs-target="#infoModal" class="theme-link nav-link link-dark px-2"><i class="bi bi-envelope-at"></i></a></li>
+      <li class="nav-item nav-item-github"><a target="_blank" rel="noopener" href="https://github.com/LOnion1124" class="theme-link nav-link link-dark px-2"><i class="bi bi-github"></i></a></li>
     </ul>
   </div>
 </nav>
@@ -158,7 +165,7 @@
         </span>
         <!-- <span class="mx-3 fs-4 fw-light d-none d-md-block"></span> -->
       </a>
-      <div class="d-none d-lg-block">
+      <!-- <div class="d-none d-lg-block">
         <div class="alert alert-info alert-dismissible fade show m-0 p-0" role="alert">
           <span class="text-muted fw-light">
             <span class="align-middle mx-2">
@@ -167,14 +174,11 @@
             <button type="button" class="btn" data-bs-dismiss="alert"><i class="bi bi-x-lg"></i></button>
           </span>
         </div>
-      </div>
+      </div> -->
     </span>
     <span>
-      <button type="button" class="btn btn-outline-primary" id="theme-toggle-button">
-        <i id="theme-toggle-icon" class="bi bi-sun"></i>
-      </button>
       
-      <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#searchModal">
+      <button type="button" class="btn btn-outline-primary" id="search-button" data-bs-toggle="modal" data-bs-target="#searchModal">
         <i class="bi bi-search"></i>
         搜索
       </button>
@@ -209,18 +213,18 @@
   
   <!-- 头像框 -->
   <div class="p-4 mb-3 bg-light-subtle rounded text-center shadow-sm">
-    <div class="p-2">
+    <div class="p-2 site-author">
       <img src="/img/avatar.png" class="rounded-circle img-fluid nofancybox" alt="" width="128">
     </div>
-    <h2 class="fw-light text-truncate">洋葱菌</h2>
+    <h2 class="fw-light text-truncate site-author">洋葱菌</h2>
     <p class="fw-light text-truncate">「风乍起，合当奋意向人生。」</p>
-    <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#infoModal">
+    <button class="btn btn-outline-primary site-author-details" type="button" data-bs-toggle="modal" data-bs-target="#infoModal">
       更多信息
       <i class="bi bi-chevron-double-right"></i>
     </button>
   </div>
   <!-- 访问统计 -->
-  <div class="p-4 mb-3 bg-light-subtle rounded text-muted text-center shadow-sm">
+  <div class="p-4 mb-3 bg-light-subtle rounded text-muted text-center shadow-sm site-state">
     <!-- <div class="d-flex flex-column flex-xxl-row justify-content-between align-items-center"> -->
     <div class="row">
       <!-- 访问量 -->
@@ -254,18 +258,18 @@
   <hr>
   <!-- 标签 -->
   <div class="px-4 py-2">
-    <h4 class="fw-light"><i class="bi bi-tags"></i>&nbsp;标签</h4>
+    <h4 class="fw-light infobar-tags"><i class="bi bi-tags"></i>&nbsp;标签</h4>
     <div class="mt-2 px-2 pt-2"><a class="site-tag-link" href="/tags/SICP/" rel="tag">SICP<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/hexo-onion/" rel="tag">hexo-onion<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E5%B8%83%E5%B0%94%E4%BB%A3%E6%95%B0/" rel="tag">布尔代数<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1/" rel="tag">数字逻辑设计<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/" rel="tag">编程基础<span class="site-tag-count">1</span></a> <a class="site-tag-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔<span class="site-tag-count">1</span></a></div>
   </div>
   <hr>
   <!-- 分类 -->
   <div class="px-4 py-2">
-    <h4 class="fw-light"><i class="bi bi-folder"></i>&nbsp;分类</h4>
+    <h4 class="fw-light infobar-categories"><i class="bi bi-folder"></i>&nbsp;分类</h4>
     <div class="mt-2 px-2 pt-2"><ul class="site-category-list"><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="site-category-list-count">2</span></li><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/">开发日志</a><span class="site-category-list-count">2</span></li><li class="site-category-list-item"><a class="site-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%8C%87%E5%8D%97/">技术指南</a><span class="site-category-list-count">2</span></li></ul></div>
   </div>
   <hr>
   <!-- 友链 -->
-  <div class="px-4 py-2">
+  <div class="px-4 py-2 infobar-friends">
     <h4 class="fw-light"><i class="bi bi-link-45deg"></i>&nbsp;友链</h4>
     <div class="mt-2 px-2 pt-2">
       <div>
@@ -471,7 +475,41 @@
 </div>
     </div>
 
-    <div class="mt-auto"><footer class="row py-3 mt-4 border-top bg-light-subtle">
+    <div class="d-none d-md-block">
+      <div style="position:fixed; top: 50%; right: 1em;">
+  <div class="mb-2">
+    <button type="button" class="btn btn-outline-primary" id="theme-toggle-button" title="切换明暗主题">
+      <i id="theme-toggle-icon" class="bi bi-sun"></i>
+    </button>
+  </div>
+  <div class="mb-2">
+    <button type="button" class="btn btn-outline-primary" id="waifu-toggle" title="切换看板娘">
+      <i class="bi bi-heart"></i>
+    </button>
+  </div>
+  <div class="mb-2">
+    <button class="btn btn-outline-primary" id="totop" title="回到顶部">
+      <i class="bi bi-chevron-bar-up"></i>
+    </button>
+  </div>
+  
+<script src="/js/totop.js"></script>
+
+</div>
+    </div>
+
+    <div class="d-none d-md-block">
+      <div id="waifu">
+  <div id="waifu-tips" class="border rounded text-center bg-light-subtle shadow lead opacity-75">
+  </div>
+  <div id="waifu-canvas">
+    <canvas id="live2d" width="800" height="800"></canvas>
+  </div>
+</div>
+    </div>
+
+    <div class="mt-auto">
+      <footer class="row py-3 mt-4 border-top bg-light-subtle">
   <ul class="nav col-md-6 justify-content-center">
     <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><i class="bi bi-c-circle"></i>&nbsp;2024~2025 L_Onion. All rights reserved.</a></li>
   </ul>
@@ -483,7 +521,8 @@
     <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
     <li class="nav-item"><a href="/about" class="nav-link px-2 text-muted">关于</a></li>
   </ul>
-</footer></div>
+</footer>
+    </div>
   </div>
 </body>
 

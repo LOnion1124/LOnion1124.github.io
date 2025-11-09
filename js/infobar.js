@@ -13,6 +13,9 @@ $(document).ready(function () {
     });
     $('a.site-tag-link').each(function () {
         $(this).wrap('<span class="me-2"></span>')
+        $(this).contents().filter(function() {
+            return this.nodeType === 3 && $.trim(this.textContent) !== '';
+        }).wrap('<span class="site-tag-name"></span>');
         $(this).wrapInner('<button class="theme-button btn btn-outline-dark btn-sm position-relative mb-3"></button>');
     });
     $('span.site-tag-count').each(function () {
