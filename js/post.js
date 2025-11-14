@@ -1,18 +1,6 @@
 // 为post页面元素添加bs5类标签
 
 $(document).ready(function () {
-    // // 将文档中的三四五级标题替换为五级标题
-    // $('div.article h3, div.article h4, div.article h5').each(function () {
-    //     var content = $(this).html();
-    //     var newElement = $('<h5></h5>').html(content);
-    //     $(this).replaceWith(newElement);
-    // });
-    // // 将文档中的一二级标题替换为三级标题
-    // $('div.article h1, div.article h2').each(function () {
-    //     var content = $(this).html();
-    //     var newElement = $('<h3></h3>').html(content);
-    //     $(this).replaceWith(newElement);
-    // });
     // 标题样式
     $('div.article h1').each(function () {
         $(this).addClass('text-dark-emphasis py-1 mb-3 border-bottom h2 fw-bold border-3');
@@ -89,7 +77,7 @@ $(document).ready(function () {
     }).each(function() {
         $(this).find('a').each(function() {
             $(this).removeClass();
-            $(this).addClass('link-primary fw-bold');
+            $(this).addClass('link-body-emphasis font-monospace');
         });
     });
     // 文末脚注
@@ -106,7 +94,7 @@ $(document).ready(function () {
         $(this).children('a:last').each(function () {
             $(this).removeClass();
             $(this).removeAttr('style');
-            $(this).addClass('ms-1 link-primary link-underline-opacity-0 icon-link icon-link-hover');
+            $(this).addClass('ms-1 link-body-emphasis link-underline-opacity-0 icon-link icon-link-hover');
             $(this).css('--bs-icon-link-transform', 'translate3d(0, -.125rem, 0)');
             $(this).html('<i class="bi bi-chevron-double-up"></i>');
         });
